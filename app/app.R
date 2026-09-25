@@ -132,8 +132,15 @@ server <- function(input, output, session) {
     }))
   })
 
+  # Markers are drawn inside renderLeaflet (not via leafletProxy):
+  # under shinylive, proxy calls can arrive before the widget exists
+  # and are silently dropped. The current view is kept on re-render.
   output$map <- renderLeaflet({
-    leaflet(options = leafletOptions(minZoom = MIN_ZOOM, maxZoom = MAX_ZOOM)) |>
+    cl <- cells()
+    ctr <- isolate(input$map_center)
+    zm <- isolate(input$map_zoom)
+
+    m <- leaflet(options = leafletOptions(minZoom = MIN_ZOOM, maxZoom = MAX_ZOOM)) |>
       addProviderTiles(
         providers$Esri.OceanBasemap, group = "Ocean",
         options = providerTileOptions(maxZoom = MAX_ZOOM)
@@ -146,22 +153,17 @@ server <- function(input, output, session) {
         baseGroups = c("Ocean", "Satellite"),
         options = layersControlOptions(collapsed = TRUE)
       ) |>
-      setMaxBounds(-105, 12, -70, 40) |>
-      fitBounds(-98, 18.5, -79, 31)
-  })
+      setMaxBounds(-105, 12, -70, 40)
 
-  # Under shinylive the proxy can fire before the map widget exists,
-  # so wait for the map to report its bounds before drawing markers
-  map_ready <- reactiveVal(FALSE)
-  observeEvent(input$map_bounds, map_ready(TRUE), once = TRUE)
+    m <- if (is.null(ctr)) {
+      fitBounds(m, -98, 18.5, -79, 31)
+    } else {
+      setView(m, ctr$lng, ctr$lat, zm)
+    }
 
-  observe({
-    req(map_ready())
-    cl <- cells()
-    proxy <- leafletProxy("map") |> clearMarkers()
-    if (is.null(cl)) return()
+    if (is.null(cl)) return(m)
 
-    proxy |>
+    m |>
       addCircleMarkers(
         data = cl, lng = ~lon, lat = ~lat,
         radius = ~pmin(4 + 2.5 * sqrt(n), 16),
