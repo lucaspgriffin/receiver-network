@@ -4,7 +4,8 @@
 #
 # Locations are generalized to ~5 km grid cells and the map
 # will not zoom in past MAX_ZOOM, so exact receiver positions
-# are never shown.
+# are never shown. Receivers are not labelled by institution;
+# partners are credited as a list in the sidebar.
 #==========================================================
 
 library(shiny)
@@ -19,21 +20,18 @@ MIN_ZOOM <- 4
 #----------------------------------------------------------
 
 rx <- read.csv("receivers_public.csv", stringsAsFactors = FALSE)
+partners <- read.csv("partners.csv", stringsAsFactors = FALSE, na.strings = "")
 
-institutions <- sort(unique(rx$Institution))
-statuses <- intersect(
-  c("Active", "Planned", "Proposed", "Not specified"),
-  unique(rx$Status)
+# Status order doubles as priority: a cell with any active
+# receiver is drawn as active, and so on
+status_cols <- c(
+  "Active"        = "#0072B2",
+  "Not specified" = "#56B4E9",
+  "Planned"       = "#E69F00",
+  "Proposed"      = "#CC79A7"
 )
-
-# One distinct colour per institution (Tableau-style, grey reserved)
-inst_cols <- c(
-  "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b",
-  "#e377c2", "#bcbd22", "#17becf", "#aec7e8", "#ffbb78", "#98df8a",
-  "#ff9896", "#c5b0d5"
-)[seq_along(institutions)]
-names(inst_cols) <- institutions
-MULTI_COL <- "#333333"
+status_cols <- status_cols[names(status_cols) %in% rx$Status]
+statuses <- names(status_cols)
 
 # Checkbox labels double as the colour key
 swatch <- function(col, label) {
@@ -46,6 +44,12 @@ swatch <- function(col, label) {
   )
 }
 
+partner_label <- ifelse(
+  is.na(partners$name),
+  partners$acronym,
+  paste0(partners$name, " (", partners$acronym, ")")
+)
+
 #----------------------------------------------------------
 # UI
 #----------------------------------------------------------
@@ -56,32 +60,27 @@ ui <- page_sidebar(
   fillable_mobile = TRUE,
 
   sidebar = sidebar(
-    width = 290,
+    width = 300,
     open = list(desktop = "open", mobile = "closed"),
     p(
       class = "small text-muted",
-      "Acoustic receivers from partner institutions across the Gulf.",
-      "Locations are generalized to ~5 km areas; circle size shows",
-      "the number of receivers in each area."
+      "Acoustic receivers used to track tagged cobia and tripletail",
+      "across the Gulf. Locations are generalized to ~5 km areas;",
+      "circle size shows the number of receivers in each area."
     ),
     checkboxGroupInput(
-      "inst", "Institution",
-      choiceNames = unname(Map(swatch, inst_cols, institutions)),
-      choiceValues = institutions,
-      selected = institutions
+      "status", "Receiver status",
+      choiceNames = unname(Map(swatch, status_cols, statuses)),
+      choiceValues = statuses,
+      selected = statuses
     ),
-    p(class = "small text-muted mt-n2", swatch(MULTI_COL, "Multiple institutions in one area")),
-    div(
-      class = "d-flex gap-2 mb-3",
-      actionButton("inst_all", "All", class = "btn-sm"),
-      actionButton("inst_none", "None", class = "btn-sm")
-    ),
-    checkboxGroupInput(
-      "status", "Status",
-      choices = statuses, selected = statuses
-    ),
+    uiOutput("summary"),
     hr(),
-    uiOutput("summary")
+    h6("Partner institutions"),
+    tags$ul(
+      class = "small ps-3 mb-0",
+      lapply(sort(partner_label), tags$li)
+    )
   ),
 
   card(
@@ -96,45 +95,36 @@ ui <- page_sidebar(
 
 server <- function(input, output, session) {
 
-  observeEvent(input$inst_all, {
-    updateCheckboxGroupInput(session, "inst", selected = institutions)
-  })
-  observeEvent(input$inst_none, {
-    updateCheckboxGroupInput(session, "inst", selected = character(0))
-  })
-
   filtered <- reactive({
-    rx[rx$Institution %in% input$inst & rx$Status %in% input$status, ]
+    rx[rx$Status %in% input$status, ]
   })
 
-  # One marker per grid cell; popup lists who has what there
+  # One marker per grid cell, coloured by its highest-priority status
   cells <- reactive({
     d <- filtered()
     if (nrow(d) == 0) return(NULL)
     key <- paste(d$cell_lat, d$cell_lon)
     do.call(rbind, lapply(split(d, key), function(g) {
-      by_inst <- tapply(g$n_receivers, g$Institution, sum)
+      g <- g[order(match(g$Status, statuses)), ]
+      n <- sum(g$n_receivers)
       data.frame(
         lat = g$cell_lat[1],
         lon = g$cell_lon[1],
-        n = sum(g$n_receivers),
-        col = if (length(by_inst) == 1) inst_cols[[names(by_inst)]] else MULTI_COL,
+        n = n,
+        col = status_cols[[g$Status[1]]],
         popup = paste0(
-          "<b>", sum(g$n_receivers), " receiver",
-          ifelse(sum(g$n_receivers) > 1, "s", ""), " in this ~5 km area</b><br>",
-          paste0(
-            g$Institution, ": ", g$n_receivers, " (", tolower(g$Status), ")",
-            collapse = "<br>"
-          )
+          "<b>", n, " receiver", ifelse(n > 1, "s", ""),
+          " in this ~5 km area</b><br>",
+          paste0(g$n_receivers, " ", tolower(g$Status), collapse = "<br>")
         ),
         stringsAsFactors = FALSE
       )
     }))
   })
 
-  # Markers are drawn inside renderLeaflet (not via leafletProxy):
-  # under shinylive, proxy calls can arrive before the widget exists
-  # and are silently dropped. The current view is kept on re-render.
+  # Markers are drawn inside renderLeaflet (not via leafletProxy) so
+  # they reliably appear under shinylive. The current view is kept
+  # when filters change.
   output$map <- renderLeaflet({
     cl <- cells()
     ctr <- isolate(input$map_center)
@@ -168,22 +158,19 @@ server <- function(input, output, session) {
         data = cl, lng = ~lon, lat = ~lat,
         radius = ~pmin(4 + 2.5 * sqrt(n), 16),
         color = "white", weight = 1, opacity = 0.9,
-        fillColor = ~col, fillOpacity = 0.8,
+        fillColor = ~col, fillOpacity = 0.85,
         popup = ~popup
       )
   })
 
   output$summary <- renderUI({
     d <- filtered()
-    tagList(
-      h6(sprintf("%s receivers shown", format(sum(d$n_receivers), big.mark = ","))),
-      p(
-        class = "small text-muted mb-0",
-        sprintf(
-          "%d institutions, %d areas",
-          length(unique(d$Institution)),
-          length(unique(paste(d$cell_lat, d$cell_lon)))
-        )
+    p(
+      class = "small text-muted",
+      sprintf(
+        "%s receivers in %d areas shown",
+        format(sum(d$n_receivers), big.mark = ","),
+        length(unique(paste(d$cell_lat, d$cell_lon)))
       )
     )
   })

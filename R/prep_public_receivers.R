@@ -5,7 +5,9 @@
 # and writes app/receivers_public.csv, which is safe to publish:
 #   - receiver names dropped (many are fishing-spot names)
 #   - coordinates snapped to a GRID_DEG grid (cell centres)
-#   - receivers aggregated to counts per cell x institution x status
+#   - receivers aggregated to counts per cell x status
+#   - institution is NOT written out (partners are credited as a list
+#     in app/partners.csv, never tied to locations)
 #
 # Run from the repo root:  Rscript R/prep_public_receivers.R
 #==========================================================
@@ -61,8 +63,8 @@ snap <- function(x) round((floor(x / GRID_DEG) + 0.5) * GRID_DEG, 4)
 
 public <- receivers %>%
   mutate(cell_lat = snap(Lat), cell_lon = snap(Lon)) %>%
-  count(cell_lat, cell_lon, Institution, Status, name = "n_receivers") %>%
-  arrange(Institution, cell_lat, cell_lon)
+  count(cell_lat, cell_lon, Status, name = "n_receivers") %>%
+  arrange(cell_lat, cell_lon, Status)
 
 write.csv(public, "app/receivers_public.csv", row.names = FALSE)
 
@@ -71,3 +73,6 @@ message(
   n_distinct(paste(public$cell_lat, public$cell_lon)), " grid cells, ",
   sum(public$n_receivers), " receivers"
 )
+
+# Institutions in the source data, for checking app/partners.csv is current
+message("Institutions in source data: ", paste(sort(unique(receivers$Institution)), collapse = ", "))

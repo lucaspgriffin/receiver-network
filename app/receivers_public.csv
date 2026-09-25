@@ -1,628 +1,623 @@
-"cell_lat","cell_lon","Institution","Status","n_receivers"
-30.025,-88.525,"CFRD","Not specified",1
-30.075,-88.575,"CFRD","Not specified",1
-30.175,-89.475,"CFRD","Not specified",2
-30.175,-89.425,"CFRD","Not specified",2
-30.175,-89.375,"CFRD","Not specified",4
-30.175,-89.325,"CFRD","Not specified",2
-30.175,-89.275,"CFRD","Not specified",2
-30.175,-88.725,"CFRD","Not specified",1
-30.225,-89.275,"CFRD","Not specified",2
-30.225,-89.225,"CFRD","Not specified",2
-30.225,-89.175,"CFRD","Not specified",1
-30.225,-89.075,"CFRD","Not specified",1
-30.225,-89.025,"CFRD","Not specified",1
-30.225,-88.525,"CFRD","Not specified",7
-30.275,-89.175,"CFRD","Not specified",1
-30.275,-89.025,"CFRD","Not specified",1
-30.275,-88.625,"CFRD","Not specified",1
-30.275,-88.525,"CFRD","Not specified",5
-30.325,-88.775,"CFRD","Not specified",1
-30.325,-88.525,"CFRD","Not specified",4
-30.225,-89.025,"CFRD_EMEL","Not specified",2
-30.225,-88.475,"EMEL","Not specified",1
-24.425,-82.125,"FWRI","Not specified",1
-24.425,-82.025,"FWRI","Not specified",2
-24.425,-81.975,"FWRI","Not specified",11
-24.425,-81.925,"FWRI","Not specified",40
-24.425,-81.875,"FWRI","Not specified",7
-24.475,-83.125,"FWRI","Not specified",5
-24.475,-82.225,"FWRI","Not specified",1
-24.475,-82.175,"FWRI","Not specified",1
-24.475,-81.925,"FWRI","Not specified",5
-24.475,-81.875,"FWRI","Not specified",15
-24.475,-81.825,"FWRI","Not specified",2
-24.475,-81.775,"FWRI","Not specified",12
-24.475,-81.725,"FWRI","Not specified",7
-24.525,-83.125,"FWRI","Not specified",7
-24.525,-83.075,"FWRI","Not specified",3
-24.525,-81.975,"FWRI","Not specified",3
-24.525,-81.875,"FWRI","Not specified",11
-24.525,-81.575,"FWRI","Not specified",2
-24.575,-81.825,"FWRI","Not specified",9
-24.575,-81.775,"FWRI","Not specified",3
-24.575,-81.725,"FWRI","Not specified",6
-24.625,-82.225,"FWRI","Not specified",3
-24.625,-81.175,"FWRI","Not specified",1
-24.675,-81.925,"FWRI","Not specified",1
-24.675,-81.725,"FWRI","Not specified",1
-24.675,-80.975,"FWRI","Not specified",1
-25.075,-80.975,"FWRI","Not specified",1
-25.075,-80.925,"FWRI","Not specified",2
-25.125,-80.975,"FWRI","Not specified",3
-25.125,-80.925,"FWRI","Not specified",4
-25.125,-80.875,"FWRI","Not specified",7
-25.175,-83.475,"FWRI","Not specified",1
-25.175,-80.875,"FWRI","Not specified",1
-25.225,-82.425,"FWRI","Proposed",1
-25.425,-80.175,"FWRI","Not specified",3
-25.425,-80.125,"FWRI","Not specified",17
-25.475,-80.175,"FWRI","Not specified",1
-25.475,-80.125,"FWRI","Not specified",20
-26.025,-83.075,"FWRI","Not specified",1
-26.175,-82.925,"FWRI","Proposed",1
-26.175,-81.925,"FWRI","Not specified",1
-26.275,-82.825,"FWRI","Proposed",1
-26.275,-82.025,"FWRI","Not specified",1
-26.275,-81.925,"FWRI","Not specified",1
-26.325,-82.225,"FWRI","Proposed",1
-26.325,-82.075,"FWRI","Proposed",1
-26.325,-81.925,"FWRI","Not specified",1
-26.375,-82.025,"FWRI","Proposed",1
-26.425,-82.425,"FWRI","Proposed",1
-26.425,-82.325,"FWRI","Proposed",1
-26.425,-82.175,"FWRI","Proposed",1
-26.425,-81.975,"FWRI","Proposed",1
-26.525,-80.075,"FWRI","Not specified",1
-26.525,-80.025,"FWRI","Not specified",2
-26.575,-82.725,"FWRI","Proposed",1
-26.575,-80.025,"FWRI","Not specified",1
-26.625,-80.025,"FWRI","Not specified",2
-26.675,-82.375,"FWRI","Proposed",1
-26.675,-80.025,"FWRI","Not specified",2
-26.725,-80.025,"FWRI","Not specified",3
-26.775,-80.025,"FWRI","Not specified",13
-26.775,-79.975,"FWRI","Not specified",2
-26.775,-79.025,"FWRI","Not specified",1
-26.825,-80.075,"FWRI","Not specified",2
-26.825,-80.025,"FWRI","Not specified",3
-26.875,-80.025,"FWRI","Not specified",1
-26.925,-80.125,"FWRI","Not specified",1
-26.925,-80.075,"FWRI","Not specified",2
-26.925,-80.025,"FWRI","Not specified",4
-26.975,-80.125,"FWRI","Not specified",5
-26.975,-80.075,"FWRI","Not specified",3
-26.975,-80.025,"FWRI","Not specified",3
-27.025,-80.075,"FWRI","Not specified",4
-27.025,-80.025,"FWRI","Not specified",3
-27.075,-80.125,"FWRI","Not specified",1
-27.075,-80.025,"FWRI","Not specified",1
-27.125,-80.175,"FWRI","Not specified",1
-27.125,-80.125,"FWRI","Not specified",2
-27.175,-82.925,"FWRI","Not specified",1
-27.175,-80.275,"FWRI","Not specified",5
-27.175,-80.225,"FWRI","Not specified",2
-27.175,-80.175,"FWRI","Not specified",8
-27.175,-80.125,"FWRI","Not specified",1
-27.175,-80.075,"FWRI","Not specified",1
-27.225,-80.325,"FWRI","Not specified",1
-27.225,-80.275,"FWRI","Not specified",6
-27.225,-80.225,"FWRI","Not specified",5
-27.225,-80.175,"FWRI","Not specified",4
-27.225,-80.125,"FWRI","Not specified",8
-27.225,-80.075,"FWRI","Not specified",6
-27.225,-80.025,"FWRI","Not specified",1
-27.275,-80.325,"FWRI","Not specified",1
-27.275,-80.225,"FWRI","Not specified",6
-27.325,-80.325,"FWRI","Not specified",2
-27.325,-80.275,"FWRI","Not specified",1
-27.375,-80.325,"FWRI","Not specified",2
-27.425,-82.975,"FWRI","Not specified",1
-27.475,-83.275,"FWRI","Not specified",1
-27.475,-83.225,"FWRI","Not specified",1
-27.475,-83.075,"FWRI","Not specified",1
-27.475,-82.975,"FWRI","Not specified",2
-27.475,-82.875,"FWRI","Not specified",1
-27.475,-80.325,"FWRI","Not specified",1
-27.475,-80.275,"FWRI","Not specified",1
-27.525,-83.725,"FWRI","Not specified",1
-27.525,-83.425,"FWRI","Not specified",1
-27.525,-82.975,"FWRI","Not specified",1
-27.525,-82.875,"FWRI","Not specified",1
-27.525,-82.775,"FWRI","Not specified",1
-27.575,-83.125,"FWRI","Not specified",1
-27.575,-82.675,"FWRI","Not specified",1
-27.625,-83.325,"FWRI","Proposed",1
-27.625,-82.575,"FWRI","Not specified",1
-27.675,-83.275,"FWRI","Not specified",1
-27.675,-83.075,"FWRI","Not specified",2
-27.675,-82.875,"FWRI","Not specified",2
-27.675,-82.575,"FWRI","Not specified",2
-27.675,-80.375,"FWRI","Not specified",1
-27.725,-82.525,"FWRI","Not specified",1
-27.875,-80.475,"FWRI","Not specified",1
-27.875,-80.425,"FWRI","Not specified",2
-28.275,-82.775,"FWRI","Not specified",2
-28.275,-82.725,"FWRI","Not specified",2
-28.325,-82.775,"FWRI","Not specified",1
-29.025,-85.325,"FWRI","Not specified",1
-29.725,-86.225,"FWRI","Not specified",1
-27.825,-91.825,"LSU_FAMEL","Active",1
-27.925,-92.425,"LSU_FAMEL","Planned",1
-27.925,-92.375,"LSU_FAMEL","Active",1
-27.925,-92.375,"LSU_FAMEL","Planned",2
-27.975,-92.575,"LSU_FAMEL","Active",1
-27.975,-92.525,"LSU_FAMEL","Active",1
-27.975,-92.425,"LSU_FAMEL","Active",1
-27.975,-92.375,"LSU_FAMEL","Active",1
-27.975,-92.375,"LSU_FAMEL","Planned",1
-27.975,-92.025,"LSU_FAMEL","Active",1
-27.975,-91.675,"LSU_FAMEL","Active",1
-28.025,-92.475,"LSU_FAMEL","Active",1
-28.025,-92.475,"LSU_FAMEL","Planned",1
-28.025,-92.425,"LSU_FAMEL","Planned",1
-28.025,-92.275,"LSU_FAMEL","Active",1
-28.075,-92.475,"LSU_FAMEL","Active",1
-28.075,-91.975,"LSU_FAMEL","Active",1
-28.075,-91.075,"LSU_FAMEL","Active",1
-28.075,-91.025,"LSU_FAMEL","Active",1
-28.125,-91.925,"LSU_FAMEL","Active",1
-28.325,-92.475,"LSU_FAMEL","Active",1
-28.525,-90.875,"LSU_FAMEL","Active",1
-28.625,-91.875,"LSU_FAMEL","Active",1
-28.625,-90.125,"LSU_FAMEL","Active",1
-28.625,-89.775,"LSU_FAMEL","Active",1
-28.675,-89.575,"LSU_FAMEL","Active",1
-28.725,-91.225,"LSU_FAMEL","Active",1
-28.725,-89.875,"LSU_FAMEL","Active",1
-28.775,-89.175,"LSU_FAMEL","Active",1
-28.875,-91.025,"LSU_FAMEL","Active",1
-28.875,-90.825,"LSU_FAMEL","Active",1
-28.875,-90.475,"LSU_FAMEL","Active",1
-28.875,-89.425,"LSU_FAMEL","Planned",1
-28.925,-89.625,"LSU_FAMEL","Planned",1
-28.975,-91.625,"LSU_FAMEL","Active",1
-28.975,-89.975,"LSU_FAMEL","Active",1
-28.975,-89.225,"LSU_FAMEL","Active",2
-28.975,-89.125,"LSU_FAMEL","Active",1
-28.975,-89.125,"LSU_FAMEL","Planned",1
-29.025,-90.575,"LSU_FAMEL","Active",2
-29.075,-90.225,"LSU_FAMEL","Active",1
-29.125,-89.525,"LSU_FAMEL","Active",1
-29.125,-86.875,"LSU_FAMEL","Active",1
-29.175,-91.575,"LSU_FAMEL","Planned",1
-29.175,-89.875,"LSU_FAMEL","Active",2
-29.175,-88.925,"LSU_FAMEL","Planned",1
-29.225,-89.325,"LSU_FAMEL","Active",1
-29.225,-88.975,"LSU_FAMEL","Active",1
-29.225,-88.975,"LSU_FAMEL","Planned",1
-29.225,-88.575,"LSU_FAMEL","Active",2
-29.225,-86.875,"LSU_FAMEL","Active",1
-29.275,-89.925,"LSU_FAMEL","Active",1
-29.325,-93.225,"LSU_FAMEL","Active",1
-29.325,-87.275,"LSU_FAMEL","Active",1
-29.325,-86.875,"LSU_FAMEL","Active",1
-29.375,-93.225,"LSU_FAMEL","Active",1
-29.375,-88.975,"LSU_FAMEL","Active",1
-29.375,-87.175,"LSU_FAMEL","Active",1
-29.425,-93.675,"LSU_FAMEL","Active",2
-29.425,-89.625,"LSU_FAMEL","Planned",1
-29.425,-86.875,"LSU_FAMEL","Active",1
-29.475,-93.675,"LSU_FAMEL","Active",1
-29.475,-93.225,"LSU_FAMEL","Active",1
-29.475,-91.275,"LSU_FAMEL","Active",1
-29.475,-87.125,"LSU_FAMEL","Active",1
-29.525,-93.475,"LSU_FAMEL","Active",1
-29.525,-93.225,"LSU_FAMEL","Active",1
-29.525,-89.125,"LSU_FAMEL","Active",1
-29.525,-87.025,"LSU_FAMEL","Active",1
-29.575,-91.425,"LSU_FAMEL","Active",1
-29.575,-91.225,"LSU_FAMEL","Active",1
-29.575,-89.075,"LSU_FAMEL","Active",1
-29.625,-93.325,"LSU_FAMEL","Active",1
-29.625,-92.775,"LSU_FAMEL","Planned",1
-29.625,-92.025,"LSU_FAMEL","Active",1
-29.625,-91.375,"LSU_FAMEL","Active",1
-29.625,-91.275,"LSU_FAMEL","Active",1
-29.625,-91.225,"LSU_FAMEL","Active",1
-29.625,-90.975,"LSU_FAMEL","Active",1
-29.625,-90.675,"LSU_FAMEL","Active",1
-29.675,-88.975,"LSU_FAMEL","Active",1
-29.725,-92.125,"LSU_FAMEL","Active",1
-29.725,-91.375,"LSU_FAMEL","Active",2
-29.725,-91.225,"LSU_FAMEL","Active",2
-29.775,-93.325,"LSU_FAMEL","Planned",1
-29.775,-91.925,"LSU_FAMEL","Active",1
-29.775,-91.175,"LSU_FAMEL","Active",1
-29.775,-88.975,"LSU_FAMEL","Active",1
-29.775,-88.875,"LSU_FAMEL","Active",1
-29.825,-92.275,"LSU_FAMEL","Active",1
-29.825,-91.425,"LSU_FAMEL","Active",1
-29.875,-89.975,"LSU_FAMEL","Planned",1
-29.875,-88.875,"LSU_FAMEL","Active",2
-29.875,-88.825,"LSU_FAMEL","Active",1
-29.925,-93.075,"LSU_FAMEL","Active",1
-29.925,-91.225,"LSU_FAMEL","Active",1
-29.925,-88.825,"LSU_FAMEL","Active",1
-29.975,-92.775,"LSU_FAMEL","Active",1
-29.975,-90.075,"LSU_FAMEL","Planned",1
-29.975,-86.575,"LSU_FAMEL","Active",1
-29.975,-86.525,"LSU_FAMEL","Active",1
-30.025,-93.225,"LSU_FAMEL","Active",1
-30.025,-88.875,"LSU_FAMEL","Active",1
-30.025,-86.725,"LSU_FAMEL","Active",2
-30.025,-86.675,"LSU_FAMEL","Active",2
-30.025,-86.625,"LSU_FAMEL","Active",1
-30.075,-88.875,"LSU_FAMEL","Active",1
-30.075,-86.775,"LSU_FAMEL","Active",1
-30.125,-91.475,"LSU_FAMEL","Active",1
-30.175,-91.525,"LSU_FAMEL","Active",1
-30.175,-91.375,"LSU_FAMEL","Active",1
-30.225,-91.575,"LSU_FAMEL","Active",1
-30.275,-91.675,"LSU_FAMEL","Active",1
-30.325,-87.125,"LSU_FAMEL","Active",1
-30.375,-91.675,"LSU_FAMEL","Active",1
-30.375,-91.525,"LSU_FAMEL","Active",1
-30.375,-86.875,"LSU_FAMEL","Active",1
-30.475,-91.775,"LSU_FAMEL","Active",1
-30.525,-91.225,"LSU_FAMEL","Planned",1
-30.675,-91.725,"LSU_FAMEL","Active",1
-30.975,-91.825,"LSU_FAMEL","Active",1
-30.975,-91.775,"LSU_FAMEL","Active",1
-31.075,-91.725,"LSU_FAMEL","Active",1
-31.175,-92.325,"LSU_FAMEL","Active",1
-31.175,-92.275,"LSU_FAMEL","Active",1
-31.225,-92.075,"LSU_FAMEL","Active",1
-31.275,-91.925,"LSU_FAMEL","Active",1
-31.275,-91.825,"LSU_FAMEL","Active",1
-31.325,-92.475,"LSU_FAMEL","Active",1
-31.325,-91.875,"LSU_FAMEL","Active",1
-31.425,-92.675,"LSU_FAMEL","Active",1
-31.475,-91.875,"LSU_FAMEL","Active",1
-31.575,-92.775,"LSU_FAMEL","Active",1
-31.625,-91.825,"LSU_FAMEL","Active",1
-31.725,-92.975,"LSU_FAMEL","Active",1
-31.925,-91.925,"LSU_FAMEL","Active",1
-31.975,-93.375,"LSU_FAMEL","Active",1
-32.125,-92.125,"LSU_FAMEL","Active",1
-32.175,-92.125,"LSU_FAMEL","Active",1
-32.275,-93.525,"LSU_FAMEL","Active",1
-32.325,-92.075,"LSU_FAMEL","Active",1
-32.525,-93.725,"LSU_FAMEL","Active",1
-32.575,-92.125,"LSU_FAMEL","Active",1
-32.875,-93.825,"LSU_FAMEL","Active",1
-32.875,-92.075,"LSU_FAMEL","Active",1
-33.025,-92.125,"LSU_FAMEL","Active",1
-33.075,-92.125,"LSU_FAMEL","Active",1
-33.275,-92.475,"LSU_FAMEL","Active",1
-33.325,-92.475,"LSU_FAMEL","Active",2
-33.575,-92.825,"LSU_FAMEL","Active",1
-33.775,-92.875,"LSU_FAMEL","Active",1
-34.125,-93.075,"LSU_FAMEL","Active",1
-30.225,-88.575,"MDMR","Not specified",2
-30.225,-88.525,"MDMR","Not specified",2
-30.275,-88.625,"MDMR","Not specified",1
-30.325,-88.575,"MDMR","Not specified",4
-30.325,-88.525,"MDMR","Not specified",1
-30.375,-88.825,"MDMR","Not specified",6
-30.375,-88.525,"MDMR","Not specified",1
-30.325,-88.475,"MSU","Not specified",1
-30.325,-88.425,"MSU","Not specified",6
-30.375,-88.425,"MSU","Not specified",3
-30.375,-88.375,"MSU","Not specified",5
-27.925,-93.625,"TAMU","Planned",2
-27.925,-93.575,"TAMU","Planned",4
-26.575,-97.375,"TAMUCC","Active",1
-26.575,-97.325,"TAMUCC","Active",2
-26.575,-97.275,"TAMUCC","Active",1
-26.825,-97.475,"TAMUCC","Active",1
-26.975,-97.475,"TAMUCC","Active",1
-27.025,-96.725,"TAMUCC","Active",1
-27.125,-97.425,"TAMUCC","Active",1
-27.425,-96.775,"TAMUCC","Planned",1
-27.425,-96.525,"TAMUCC","Active",2
-27.575,-97.225,"TAMUCC","Planned",1
-27.575,-96.475,"TAMUCC","Active",1
-27.625,-97.225,"TAMUCC","Active",4
-27.625,-97.025,"TAMUCC","Active",1
-27.675,-97.325,"TAMUCC","Active",1
-27.675,-96.275,"TAMUCC","Planned",1
-27.725,-97.325,"TAMUCC","Active",5
-27.725,-97.125,"TAMUCC","Active",1
-27.725,-97.075,"TAMUCC","Active",2
-27.725,-96.175,"TAMUCC","Active",1
-27.775,-96.225,"TAMUCC","Active",1
-27.825,-97.075,"TAMUCC","Active",2
-27.825,-97.025,"TAMUCC","Active",1
-27.825,-96.525,"TAMUCC","Active",1
-27.875,-97.175,"TAMUCC","Active",4
-27.875,-97.125,"TAMUCC","Active",2
-27.875,-97.075,"TAMUCC","Active",2
-27.875,-96.175,"TAMUCC","Active",1
-27.925,-96.325,"TAMUCC","Active",1
-28.075,-96.825,"TAMUCC","Active",1
-28.125,-97.025,"TAMUCC","Planned",1
-28.125,-96.925,"TAMUCC","Planned",1
-28.125,-96.825,"TAMUCC","Active",1
-28.175,-97.025,"TAMUCC","Planned",1
-28.175,-96.875,"TAMUCC","Planned",1
-28.375,-96.425,"TAMUCC","Active",1
-28.425,-96.425,"TAMUCC","Active",1
-28.425,-96.375,"TAMUCC","Active",1
-28.425,-96.325,"TAMUCC","Active",2
-28.525,-96.225,"TAMUCC","Planned",1
-28.575,-96.625,"TAMUCC","Planned",1
-28.575,-96.475,"TAMUCC","Planned",1
-28.575,-96.175,"TAMUCC","Planned",1
-28.575,-96.075,"TAMUCC","Planned",1
-28.625,-96.625,"TAMUCC","Planned",1
-28.625,-96.575,"TAMUCC","Planned",1
-28.625,-96.225,"TAMUCC","Planned",1
-28.625,-96.025,"TAMUCC","Planned",1
-28.725,-96.575,"TAMUCC","Planned",1
-28.725,-96.175,"TAMUCC","Planned",1
-19.125,-95.825,"TAMUG","Active",2
-25.975,-97.075,"TAMUG","Active",1
-26.125,-96.875,"TAMUG","Active",1
-26.125,-96.225,"TAMUG","Active",1
-26.175,-96.875,"TAMUG","Active",1
-26.275,-97.025,"TAMUG","Active",2
-26.425,-97.025,"TAMUG","Active",2
-26.525,-97.125,"TAMUG","Active",1
-27.775,-95.075,"TAMUG","Active",1
-27.775,-94.975,"TAMUG","Active",1
-27.775,-94.825,"TAMUG","Active",1
-27.775,-94.725,"TAMUG","Active",1
-27.825,-93.675,"TAMUG","Active",1
-27.825,-93.075,"TAMUG","Active",1
-27.825,-92.875,"TAMUG","Active",1
-27.875,-93.825,"TAMUG","Active",1
-27.875,-93.625,"TAMUG","Active",1
-27.875,-93.425,"TAMUG","Active",1
-27.875,-93.325,"TAMUG","Active",1
-27.925,-93.825,"TAMUG","Active",1
-27.925,-93.625,"TAMUG","Active",2
-27.925,-93.575,"TAMUG","Active",4
-27.925,-93.425,"TAMUG","Active",1
-28.025,-93.975,"TAMUG","Active",1
-28.025,-93.525,"TAMUG","Active",1
-28.175,-94.275,"TAMUG","Active",1
-28.275,-94.225,"TAMUG","Active",2
-28.425,-94.275,"TAMUG","Active",1
-28.525,-96.075,"TAMUG","Active",1
-28.575,-95.825,"TAMUG","Active",1
-28.575,-94.825,"TAMUG","Active",1
-28.725,-95.525,"TAMUG","Active",1
-28.825,-95.375,"TAMUG","Active",1
-28.875,-94.675,"TAMUG","Active",1
-28.925,-95.325,"TAMUG","Active",1
-29.075,-95.125,"TAMUG","Active",1
-29.125,-94.825,"TAMUG","Active",1
-29.175,-95.125,"TAMUG","Active",1
-29.175,-95.075,"TAMUG","Active",1
-29.175,-95.025,"TAMUG","Active",1
-29.175,-94.975,"TAMUG","Active",1
-29.225,-95.225,"TAMUG","Active",1
-29.225,-95.025,"TAMUG","Active",2
-29.225,-94.975,"TAMUG","Active",1
-29.225,-94.925,"TAMUG","Active",1
-29.275,-94.975,"TAMUG","Active",1
-29.275,-94.925,"TAMUG","Active",1
-29.275,-94.775,"TAMUG","Active",1
-29.325,-94.775,"TAMUG","Active",1
-29.375,-94.825,"TAMUG","Active",2
-29.375,-94.725,"TAMUG","Active",1
-29.425,-94.875,"TAMUG","Active",1
-29.425,-94.675,"TAMUG","Active",1
-29.475,-94.625,"TAMUG","Active",1
-29.525,-94.775,"TAMUG","Active",1
-29.525,-94.675,"TAMUG","Active",1
-29.525,-94.075,"TAMUG","Active",1
-29.525,-93.825,"TAMUG","Active",1
-29.575,-94.575,"TAMUG","Active",1
-29.575,-94.375,"TAMUG","Active",1
-29.625,-93.675,"TAMUG","Active",1
-29.675,-93.825,"TAMUG","Active",2
-29.675,-93.725,"TAMUG","Active",1
-29.725,-94.125,"TAMUG","Active",1
-29.725,-94.025,"TAMUG","Active",2
-29.725,-93.875,"TAMUG","Active",2
-29.775,-93.975,"TAMUG","Active",1
-29.775,-93.925,"TAMUG","Active",2
-29.775,-93.875,"TAMUG","Active",1
-29.825,-93.975,"TAMUG","Active",1
-29.825,-93.875,"TAMUG","Active",1
-29.825,-93.775,"TAMUG","Active",1
-29.875,-93.925,"TAMUG","Active",1
-29.875,-93.775,"TAMUG","Active",1
-29.875,-93.725,"TAMUG","Active",1
-29.925,-93.875,"TAMUG","Active",1
-29.925,-93.775,"TAMUG","Active",1
-29.975,-93.875,"TAMUG","Active",1
-29.975,-93.775,"TAMUG","Active",2
-30.025,-93.775,"TAMUG","Active",1
-30.025,-93.725,"TAMUG","Active",1
-30.075,-88.225,"USA","Not specified",1
-30.125,-88.375,"USA","Not specified",1
-30.125,-88.275,"USA","Not specified",1
-30.125,-88.075,"USA","Not specified",3
-30.125,-87.825,"USA","Not specified",1
-30.175,-88.225,"USA","Not specified",1
-30.175,-88.175,"USA","Not specified",1
-30.175,-88.075,"USA","Not specified",2
-30.175,-88.025,"USA","Not specified",4
-30.175,-87.975,"USA","Not specified",1
-30.175,-87.925,"USA","Not specified",1
-30.175,-87.675,"USA","Not specified",1
-30.175,-87.525,"USA","Not specified",1
-30.225,-88.425,"USA","Not specified",1
-30.225,-88.375,"USA","Not specified",10
-30.225,-88.325,"USA","Not specified",5
-30.225,-88.275,"USA","Not specified",3
-30.225,-88.225,"USA","Not specified",1
-30.225,-88.075,"USA","Not specified",3
-30.225,-88.025,"USA","Not specified",7
-30.225,-87.975,"USA","Not specified",1
-30.225,-87.875,"USA","Not specified",1
-30.225,-87.675,"USA","Not specified",1
-30.275,-88.325,"USA","Not specified",7
-30.275,-88.275,"USA","Not specified",1
-30.275,-88.225,"USA","Not specified",1
-30.275,-88.175,"USA","Not specified",2
-30.275,-88.125,"USA","Not specified",3
-30.275,-88.075,"USA","Not specified",2
-30.275,-88.025,"USA","Not specified",1
-30.275,-87.975,"USA","Not specified",1
-30.275,-87.875,"USA","Not specified",1
-30.275,-87.775,"USA","Not specified",1
-30.275,-87.575,"USA","Not specified",1
-30.325,-88.325,"USA","Not specified",3
-30.325,-88.275,"USA","Not specified",5
-30.325,-88.175,"USA","Not specified",2
-30.325,-88.125,"USA","Not specified",2
-30.325,-88.025,"USA","Not specified",1
-30.375,-88.275,"USA","Not specified",3
-30.375,-88.025,"USA","Not specified",1
-30.375,-87.875,"USA","Not specified",1
-30.375,-87.475,"USA","Not specified",1
-30.425,-88.075,"USA","Not specified",1
-30.425,-88.025,"USA","Not specified",2
-30.475,-88.125,"USA","Not specified",1
-30.475,-87.975,"USA","Not specified",1
-30.525,-87.925,"USA","Not specified",1
-30.575,-88.075,"USA","Not specified",1
-30.675,-88.025,"USA","Not specified",1
-30.675,-87.975,"USA","Not specified",1
-30.675,-87.925,"USA","Not specified",1
-29.125,-83.475,"USF","Not specified",2
-29.125,-83.425,"USF","Not specified",1
-29.125,-83.375,"USF","Not specified",1
-29.125,-83.325,"USF","Not specified",1
-29.125,-83.275,"USF","Not specified",2
-29.125,-83.225,"USF","Not specified",1
-29.125,-83.175,"USF","Not specified",1
-29.175,-83.625,"USF","Not specified",1
-29.175,-83.575,"USF","Not specified",1
-29.175,-83.525,"USF","Not specified",1
-29.275,-83.175,"USGS","Not specified",6
-29.275,-83.125,"USGS","Not specified",8
-29.275,-83.075,"USGS","Not specified",4
-29.325,-83.175,"USGS","Not specified",5
-29.625,-85.375,"USGS","Not specified",1
-29.625,-85.125,"USGS","Not specified",1
-29.625,-84.975,"USGS","Not specified",1
-29.675,-85.375,"USGS","Not specified",3
-29.675,-85.325,"USGS","Not specified",2
-29.675,-85.225,"USGS","Not specified",1
-29.675,-85.175,"USGS","Planned",1
-29.675,-85.075,"USGS","Not specified",1
-29.725,-85.475,"USGS","Not specified",1
-29.725,-85.375,"USGS","Not specified",4
-29.725,-85.325,"USGS","Not specified",8
-29.725,-84.975,"USGS","Not specified",1
-29.775,-85.425,"USGS","Not specified",2
-29.775,-85.325,"USGS","Not specified",1
-29.775,-84.675,"USGS","Not specified",2
-29.825,-85.425,"USGS","Not specified",2
-29.825,-85.325,"USGS","Not specified",1
-29.825,-84.575,"USGS","Not specified",2
-29.875,-85.475,"USGS","Not specified",1
-29.875,-85.375,"USGS","Not specified",5
-29.875,-85.225,"USGS","Not specified",1
-29.875,-84.625,"USGS","Not specified",1
-29.975,-85.525,"USGS","Not specified",1
-30.075,-86.275,"USGS","Not specified",1
-30.125,-86.825,"USGS","Planned",3
-30.125,-86.775,"USGS","Not specified",1
-30.125,-86.575,"USGS","Not specified",1
-30.175,-86.825,"USGS","Planned",7
-30.225,-87.725,"USGS","Not specified",2
-30.225,-86.825,"USGS","Planned",6
-30.225,-85.875,"USGS","Not specified",1
-30.275,-87.525,"USGS","Not specified",2
-30.275,-86.825,"USGS","Planned",7
-30.325,-87.425,"USGS","Not specified",1
-30.325,-86.825,"USGS","Planned",7
-30.375,-86.825,"USGS","Planned",5
-30.375,-86.775,"USGS","Not specified",1
-30.375,-86.625,"USGS","Not specified",2
-30.375,-86.575,"USGS","Not specified",1
-30.525,-87.925,"USGS","Not specified",1
-30.625,-88.075,"USGS","Not specified",1
-30.025,-88.575,"USM","Planned",1
-30.025,-88.525,"USM","Active",1
-30.075,-88.725,"USM","Planned",1
-30.075,-88.575,"USM","Active",1
-30.125,-88.975,"USM","Planned",1
-30.125,-88.925,"USM","Planned",3
-30.125,-88.875,"USM","Planned",1
-30.125,-88.575,"USM","Planned",1
-30.175,-89.675,"USM","Active",1
-30.175,-89.475,"USM","Active",1
-30.175,-89.425,"USM","Active",2
-30.175,-88.975,"USM","Planned",4
-30.175,-88.725,"USM","Active",1
-30.175,-88.575,"USM","Planned",2
-30.175,-88.525,"USM","Planned",1
-30.225,-89.675,"USM","Active",1
-30.225,-89.625,"USM","Active",5
-30.225,-89.175,"USM","Active",1
-30.225,-89.125,"USM","Active",3
-30.225,-89.075,"USM","Active",8
-30.225,-89.025,"USM","Active",3
-30.225,-88.975,"USM","Active",1
-30.225,-88.925,"USM","Active",5
-30.225,-88.875,"USM","Active",1
-30.225,-88.825,"USM","Active",5
-30.225,-88.775,"USM","Active",2
-30.225,-88.675,"USM","Planned",1
-30.225,-88.625,"USM","Active",1
-30.225,-88.575,"USM","Active",1
-30.225,-88.525,"USM","Active",6
-30.225,-88.525,"USM","Planned",1
-30.225,-88.475,"USM","Active",1
-30.275,-89.625,"USM","Active",2
-30.275,-89.375,"USM","Active",1
-30.275,-89.325,"USM","Active",2
-30.275,-89.275,"USM","Active",11
-30.275,-89.075,"USM","Active",1
-30.275,-88.925,"USM","Active",1
-30.275,-88.875,"USM","Active",1
-30.275,-88.725,"USM","Active",1
-30.275,-88.625,"USM","Active",1
-30.275,-88.575,"USM","Active",1
-30.275,-88.525,"USM","Active",4
-30.325,-89.375,"USM","Active",2
-30.325,-89.325,"USM","Active",16
-30.325,-89.275,"USM","Active",7
-30.325,-89.075,"USM","Active",2
-30.325,-88.675,"USM","Active",6
-30.325,-88.625,"USM","Active",10
-30.325,-88.575,"USM","Active",12
-30.325,-88.525,"USM","Active",5
-30.325,-88.475,"USM","Active",1
-30.325,-88.425,"USM","Active",2
-30.375,-89.675,"USM","Active",1
-30.375,-89.325,"USM","Active",1
-30.375,-89.275,"USM","Active",2
-30.375,-88.875,"USM","Active",6
-30.375,-88.825,"USM","Active",6
-30.375,-88.675,"USM","Active",2
-30.375,-88.625,"USM","Active",8
-30.375,-88.575,"USM","Active",10
-30.375,-88.525,"USM","Active",1
-30.375,-88.475,"USM","Active",1
-30.425,-89.675,"USM","Active",1
-30.425,-89.025,"USM","Active",3
-30.425,-88.975,"USM","Active",2
-30.425,-88.875,"USM","Active",3
-30.425,-88.825,"USM","Active",2
-30.425,-88.625,"USM","Active",1
-30.425,-88.575,"USM","Active",3
-30.425,-88.525,"USM","Active",1
-30.425,-88.475,"USM","Active",1
-30.475,-89.725,"USM","Active",1
-30.475,-88.625,"USM","Active",3
-30.475,-88.575,"USM","Active",2
-30.525,-88.625,"USM","Active",2
-30.525,-88.575,"USM","Active",2
+"cell_lat","cell_lon","Status","n_receivers"
+19.125,-95.825,"Active",2
+24.425,-82.125,"Not specified",1
+24.425,-82.025,"Not specified",2
+24.425,-81.975,"Not specified",11
+24.425,-81.925,"Not specified",40
+24.425,-81.875,"Not specified",7
+24.475,-83.125,"Not specified",5
+24.475,-82.225,"Not specified",1
+24.475,-82.175,"Not specified",1
+24.475,-81.925,"Not specified",5
+24.475,-81.875,"Not specified",15
+24.475,-81.825,"Not specified",2
+24.475,-81.775,"Not specified",12
+24.475,-81.725,"Not specified",7
+24.525,-83.125,"Not specified",7
+24.525,-83.075,"Not specified",3
+24.525,-81.975,"Not specified",3
+24.525,-81.875,"Not specified",11
+24.525,-81.575,"Not specified",2
+24.575,-81.825,"Not specified",9
+24.575,-81.775,"Not specified",3
+24.575,-81.725,"Not specified",6
+24.625,-82.225,"Not specified",3
+24.625,-81.175,"Not specified",1
+24.675,-81.925,"Not specified",1
+24.675,-81.725,"Not specified",1
+24.675,-80.975,"Not specified",1
+25.075,-80.975,"Not specified",1
+25.075,-80.925,"Not specified",2
+25.125,-80.975,"Not specified",3
+25.125,-80.925,"Not specified",4
+25.125,-80.875,"Not specified",7
+25.175,-83.475,"Not specified",1
+25.175,-80.875,"Not specified",1
+25.225,-82.425,"Proposed",1
+25.425,-80.175,"Not specified",3
+25.425,-80.125,"Not specified",17
+25.475,-80.175,"Not specified",1
+25.475,-80.125,"Not specified",20
+25.975,-97.075,"Active",1
+26.025,-83.075,"Not specified",1
+26.125,-96.875,"Active",1
+26.125,-96.225,"Active",1
+26.175,-96.875,"Active",1
+26.175,-82.925,"Proposed",1
+26.175,-81.925,"Not specified",1
+26.275,-97.025,"Active",2
+26.275,-82.825,"Proposed",1
+26.275,-82.025,"Not specified",1
+26.275,-81.925,"Not specified",1
+26.325,-82.225,"Proposed",1
+26.325,-82.075,"Proposed",1
+26.325,-81.925,"Not specified",1
+26.375,-82.025,"Proposed",1
+26.425,-97.025,"Active",2
+26.425,-82.425,"Proposed",1
+26.425,-82.325,"Proposed",1
+26.425,-82.175,"Proposed",1
+26.425,-81.975,"Proposed",1
+26.525,-97.125,"Active",1
+26.525,-80.075,"Not specified",1
+26.525,-80.025,"Not specified",2
+26.575,-97.375,"Active",1
+26.575,-97.325,"Active",2
+26.575,-97.275,"Active",1
+26.575,-82.725,"Proposed",1
+26.575,-80.025,"Not specified",1
+26.625,-80.025,"Not specified",2
+26.675,-82.375,"Proposed",1
+26.675,-80.025,"Not specified",2
+26.725,-80.025,"Not specified",3
+26.775,-80.025,"Not specified",13
+26.775,-79.975,"Not specified",2
+26.775,-79.025,"Not specified",1
+26.825,-97.475,"Active",1
+26.825,-80.075,"Not specified",2
+26.825,-80.025,"Not specified",3
+26.875,-80.025,"Not specified",1
+26.925,-80.125,"Not specified",1
+26.925,-80.075,"Not specified",2
+26.925,-80.025,"Not specified",4
+26.975,-97.475,"Active",1
+26.975,-80.125,"Not specified",5
+26.975,-80.075,"Not specified",3
+26.975,-80.025,"Not specified",3
+27.025,-96.725,"Active",1
+27.025,-80.075,"Not specified",4
+27.025,-80.025,"Not specified",3
+27.075,-80.125,"Not specified",1
+27.075,-80.025,"Not specified",1
+27.125,-97.425,"Active",1
+27.125,-80.175,"Not specified",1
+27.125,-80.125,"Not specified",2
+27.175,-82.925,"Not specified",1
+27.175,-80.275,"Not specified",5
+27.175,-80.225,"Not specified",2
+27.175,-80.175,"Not specified",8
+27.175,-80.125,"Not specified",1
+27.175,-80.075,"Not specified",1
+27.225,-80.325,"Not specified",1
+27.225,-80.275,"Not specified",6
+27.225,-80.225,"Not specified",5
+27.225,-80.175,"Not specified",4
+27.225,-80.125,"Not specified",8
+27.225,-80.075,"Not specified",6
+27.225,-80.025,"Not specified",1
+27.275,-80.325,"Not specified",1
+27.275,-80.225,"Not specified",6
+27.325,-80.325,"Not specified",2
+27.325,-80.275,"Not specified",1
+27.375,-80.325,"Not specified",2
+27.425,-96.775,"Planned",1
+27.425,-96.525,"Active",2
+27.425,-82.975,"Not specified",1
+27.475,-83.275,"Not specified",1
+27.475,-83.225,"Not specified",1
+27.475,-83.075,"Not specified",1
+27.475,-82.975,"Not specified",2
+27.475,-82.875,"Not specified",1
+27.475,-80.325,"Not specified",1
+27.475,-80.275,"Not specified",1
+27.525,-83.725,"Not specified",1
+27.525,-83.425,"Not specified",1
+27.525,-82.975,"Not specified",1
+27.525,-82.875,"Not specified",1
+27.525,-82.775,"Not specified",1
+27.575,-97.225,"Planned",1
+27.575,-96.475,"Active",1
+27.575,-83.125,"Not specified",1
+27.575,-82.675,"Not specified",1
+27.625,-97.225,"Active",4
+27.625,-97.025,"Active",1
+27.625,-83.325,"Proposed",1
+27.625,-82.575,"Not specified",1
+27.675,-97.325,"Active",1
+27.675,-96.275,"Planned",1
+27.675,-83.275,"Not specified",1
+27.675,-83.075,"Not specified",2
+27.675,-82.875,"Not specified",2
+27.675,-82.575,"Not specified",2
+27.675,-80.375,"Not specified",1
+27.725,-97.325,"Active",5
+27.725,-97.125,"Active",1
+27.725,-97.075,"Active",2
+27.725,-96.175,"Active",1
+27.725,-82.525,"Not specified",1
+27.775,-96.225,"Active",1
+27.775,-95.075,"Active",1
+27.775,-94.975,"Active",1
+27.775,-94.825,"Active",1
+27.775,-94.725,"Active",1
+27.825,-97.075,"Active",2
+27.825,-97.025,"Active",1
+27.825,-96.525,"Active",1
+27.825,-93.675,"Active",1
+27.825,-93.075,"Active",1
+27.825,-92.875,"Active",1
+27.825,-91.825,"Active",1
+27.875,-97.175,"Active",4
+27.875,-97.125,"Active",2
+27.875,-97.075,"Active",2
+27.875,-96.175,"Active",1
+27.875,-93.825,"Active",1
+27.875,-93.625,"Active",1
+27.875,-93.425,"Active",1
+27.875,-93.325,"Active",1
+27.875,-80.475,"Not specified",1
+27.875,-80.425,"Not specified",2
+27.925,-96.325,"Active",1
+27.925,-93.825,"Active",1
+27.925,-93.625,"Active",2
+27.925,-93.625,"Planned",2
+27.925,-93.575,"Active",4
+27.925,-93.575,"Planned",4
+27.925,-93.425,"Active",1
+27.925,-92.425,"Planned",1
+27.925,-92.375,"Active",1
+27.925,-92.375,"Planned",2
+27.975,-92.575,"Active",1
+27.975,-92.525,"Active",1
+27.975,-92.425,"Active",1
+27.975,-92.375,"Active",1
+27.975,-92.375,"Planned",1
+27.975,-92.025,"Active",1
+27.975,-91.675,"Active",1
+28.025,-93.975,"Active",1
+28.025,-93.525,"Active",1
+28.025,-92.475,"Active",1
+28.025,-92.475,"Planned",1
+28.025,-92.425,"Planned",1
+28.025,-92.275,"Active",1
+28.075,-96.825,"Active",1
+28.075,-92.475,"Active",1
+28.075,-91.975,"Active",1
+28.075,-91.075,"Active",1
+28.075,-91.025,"Active",1
+28.125,-97.025,"Planned",1
+28.125,-96.925,"Planned",1
+28.125,-96.825,"Active",1
+28.125,-91.925,"Active",1
+28.175,-97.025,"Planned",1
+28.175,-96.875,"Planned",1
+28.175,-94.275,"Active",1
+28.275,-94.225,"Active",2
+28.275,-82.775,"Not specified",2
+28.275,-82.725,"Not specified",2
+28.325,-92.475,"Active",1
+28.325,-82.775,"Not specified",1
+28.375,-96.425,"Active",1
+28.425,-96.425,"Active",1
+28.425,-96.375,"Active",1
+28.425,-96.325,"Active",2
+28.425,-94.275,"Active",1
+28.525,-96.225,"Planned",1
+28.525,-96.075,"Active",1
+28.525,-90.875,"Active",1
+28.575,-96.625,"Planned",1
+28.575,-96.475,"Planned",1
+28.575,-96.175,"Planned",1
+28.575,-96.075,"Planned",1
+28.575,-95.825,"Active",1
+28.575,-94.825,"Active",1
+28.625,-96.625,"Planned",1
+28.625,-96.575,"Planned",1
+28.625,-96.225,"Planned",1
+28.625,-96.025,"Planned",1
+28.625,-91.875,"Active",1
+28.625,-90.125,"Active",1
+28.625,-89.775,"Active",1
+28.675,-89.575,"Active",1
+28.725,-96.575,"Planned",1
+28.725,-96.175,"Planned",1
+28.725,-95.525,"Active",1
+28.725,-91.225,"Active",1
+28.725,-89.875,"Active",1
+28.775,-89.175,"Active",1
+28.825,-95.375,"Active",1
+28.875,-94.675,"Active",1
+28.875,-91.025,"Active",1
+28.875,-90.825,"Active",1
+28.875,-90.475,"Active",1
+28.875,-89.425,"Planned",1
+28.925,-95.325,"Active",1
+28.925,-89.625,"Planned",1
+28.975,-91.625,"Active",1
+28.975,-89.975,"Active",1
+28.975,-89.225,"Active",2
+28.975,-89.125,"Active",1
+28.975,-89.125,"Planned",1
+29.025,-90.575,"Active",2
+29.025,-85.325,"Not specified",1
+29.075,-95.125,"Active",1
+29.075,-90.225,"Active",1
+29.125,-94.825,"Active",1
+29.125,-89.525,"Active",1
+29.125,-86.875,"Active",1
+29.125,-83.475,"Not specified",2
+29.125,-83.425,"Not specified",1
+29.125,-83.375,"Not specified",1
+29.125,-83.325,"Not specified",1
+29.125,-83.275,"Not specified",2
+29.125,-83.225,"Not specified",1
+29.125,-83.175,"Not specified",1
+29.175,-95.125,"Active",1
+29.175,-95.075,"Active",1
+29.175,-95.025,"Active",1
+29.175,-94.975,"Active",1
+29.175,-91.575,"Planned",1
+29.175,-89.875,"Active",2
+29.175,-88.925,"Planned",1
+29.175,-83.625,"Not specified",1
+29.175,-83.575,"Not specified",1
+29.175,-83.525,"Not specified",1
+29.225,-95.225,"Active",1
+29.225,-95.025,"Active",2
+29.225,-94.975,"Active",1
+29.225,-94.925,"Active",1
+29.225,-89.325,"Active",1
+29.225,-88.975,"Active",1
+29.225,-88.975,"Planned",1
+29.225,-88.575,"Active",2
+29.225,-86.875,"Active",1
+29.275,-94.975,"Active",1
+29.275,-94.925,"Active",1
+29.275,-94.775,"Active",1
+29.275,-89.925,"Active",1
+29.275,-83.175,"Not specified",6
+29.275,-83.125,"Not specified",8
+29.275,-83.075,"Not specified",4
+29.325,-94.775,"Active",1
+29.325,-93.225,"Active",1
+29.325,-87.275,"Active",1
+29.325,-86.875,"Active",1
+29.325,-83.175,"Not specified",5
+29.375,-94.825,"Active",2
+29.375,-94.725,"Active",1
+29.375,-93.225,"Active",1
+29.375,-88.975,"Active",1
+29.375,-87.175,"Active",1
+29.425,-94.875,"Active",1
+29.425,-94.675,"Active",1
+29.425,-93.675,"Active",2
+29.425,-89.625,"Planned",1
+29.425,-86.875,"Active",1
+29.475,-94.625,"Active",1
+29.475,-93.675,"Active",1
+29.475,-93.225,"Active",1
+29.475,-91.275,"Active",1
+29.475,-87.125,"Active",1
+29.525,-94.775,"Active",1
+29.525,-94.675,"Active",1
+29.525,-94.075,"Active",1
+29.525,-93.825,"Active",1
+29.525,-93.475,"Active",1
+29.525,-93.225,"Active",1
+29.525,-89.125,"Active",1
+29.525,-87.025,"Active",1
+29.575,-94.575,"Active",1
+29.575,-94.375,"Active",1
+29.575,-91.425,"Active",1
+29.575,-91.225,"Active",1
+29.575,-89.075,"Active",1
+29.625,-93.675,"Active",1
+29.625,-93.325,"Active",1
+29.625,-92.775,"Planned",1
+29.625,-92.025,"Active",1
+29.625,-91.375,"Active",1
+29.625,-91.275,"Active",1
+29.625,-91.225,"Active",1
+29.625,-90.975,"Active",1
+29.625,-90.675,"Active",1
+29.625,-85.375,"Not specified",1
+29.625,-85.125,"Not specified",1
+29.625,-84.975,"Not specified",1
+29.675,-93.825,"Active",2
+29.675,-93.725,"Active",1
+29.675,-88.975,"Active",1
+29.675,-85.375,"Not specified",3
+29.675,-85.325,"Not specified",2
+29.675,-85.225,"Not specified",1
+29.675,-85.175,"Planned",1
+29.675,-85.075,"Not specified",1
+29.725,-94.125,"Active",1
+29.725,-94.025,"Active",2
+29.725,-93.875,"Active",2
+29.725,-92.125,"Active",1
+29.725,-91.375,"Active",2
+29.725,-91.225,"Active",2
+29.725,-86.225,"Not specified",1
+29.725,-85.475,"Not specified",1
+29.725,-85.375,"Not specified",4
+29.725,-85.325,"Not specified",8
+29.725,-84.975,"Not specified",1
+29.775,-93.975,"Active",1
+29.775,-93.925,"Active",2
+29.775,-93.875,"Active",1
+29.775,-93.325,"Planned",1
+29.775,-91.925,"Active",1
+29.775,-91.175,"Active",1
+29.775,-88.975,"Active",1
+29.775,-88.875,"Active",1
+29.775,-85.425,"Not specified",2
+29.775,-85.325,"Not specified",1
+29.775,-84.675,"Not specified",2
+29.825,-93.975,"Active",1
+29.825,-93.875,"Active",1
+29.825,-93.775,"Active",1
+29.825,-92.275,"Active",1
+29.825,-91.425,"Active",1
+29.825,-85.425,"Not specified",2
+29.825,-85.325,"Not specified",1
+29.825,-84.575,"Not specified",2
+29.875,-93.925,"Active",1
+29.875,-93.775,"Active",1
+29.875,-93.725,"Active",1
+29.875,-89.975,"Planned",1
+29.875,-88.875,"Active",2
+29.875,-88.825,"Active",1
+29.875,-85.475,"Not specified",1
+29.875,-85.375,"Not specified",5
+29.875,-85.225,"Not specified",1
+29.875,-84.625,"Not specified",1
+29.925,-93.875,"Active",1
+29.925,-93.775,"Active",1
+29.925,-93.075,"Active",1
+29.925,-91.225,"Active",1
+29.925,-88.825,"Active",1
+29.975,-93.875,"Active",1
+29.975,-93.775,"Active",2
+29.975,-92.775,"Active",1
+29.975,-90.075,"Planned",1
+29.975,-86.575,"Active",1
+29.975,-86.525,"Active",1
+29.975,-85.525,"Not specified",1
+30.025,-93.775,"Active",1
+30.025,-93.725,"Active",1
+30.025,-93.225,"Active",1
+30.025,-88.875,"Active",1
+30.025,-88.575,"Planned",1
+30.025,-88.525,"Active",1
+30.025,-88.525,"Not specified",1
+30.025,-86.725,"Active",2
+30.025,-86.675,"Active",2
+30.025,-86.625,"Active",1
+30.075,-88.875,"Active",1
+30.075,-88.725,"Planned",1
+30.075,-88.575,"Active",1
+30.075,-88.575,"Not specified",1
+30.075,-88.225,"Not specified",1
+30.075,-86.775,"Active",1
+30.075,-86.275,"Not specified",1
+30.125,-91.475,"Active",1
+30.125,-88.975,"Planned",1
+30.125,-88.925,"Planned",3
+30.125,-88.875,"Planned",1
+30.125,-88.575,"Planned",1
+30.125,-88.375,"Not specified",1
+30.125,-88.275,"Not specified",1
+30.125,-88.075,"Not specified",3
+30.125,-87.825,"Not specified",1
+30.125,-86.825,"Planned",3
+30.125,-86.775,"Not specified",1
+30.125,-86.575,"Not specified",1
+30.175,-91.525,"Active",1
+30.175,-91.375,"Active",1
+30.175,-89.675,"Active",1
+30.175,-89.475,"Active",1
+30.175,-89.475,"Not specified",2
+30.175,-89.425,"Active",2
+30.175,-89.425,"Not specified",2
+30.175,-89.375,"Not specified",4
+30.175,-89.325,"Not specified",2
+30.175,-89.275,"Not specified",2
+30.175,-88.975,"Planned",4
+30.175,-88.725,"Active",1
+30.175,-88.725,"Not specified",1
+30.175,-88.575,"Planned",2
+30.175,-88.525,"Planned",1
+30.175,-88.225,"Not specified",1
+30.175,-88.175,"Not specified",1
+30.175,-88.075,"Not specified",2
+30.175,-88.025,"Not specified",4
+30.175,-87.975,"Not specified",1
+30.175,-87.925,"Not specified",1
+30.175,-87.675,"Not specified",1
+30.175,-87.525,"Not specified",1
+30.175,-86.825,"Planned",7
+30.225,-91.575,"Active",1
+30.225,-89.675,"Active",1
+30.225,-89.625,"Active",5
+30.225,-89.275,"Not specified",2
+30.225,-89.225,"Not specified",2
+30.225,-89.175,"Active",1
+30.225,-89.175,"Not specified",1
+30.225,-89.125,"Active",3
+30.225,-89.075,"Active",8
+30.225,-89.075,"Not specified",1
+30.225,-89.025,"Active",3
+30.225,-89.025,"Not specified",3
+30.225,-88.975,"Active",1
+30.225,-88.925,"Active",5
+30.225,-88.875,"Active",1
+30.225,-88.825,"Active",5
+30.225,-88.775,"Active",2
+30.225,-88.675,"Planned",1
+30.225,-88.625,"Active",1
+30.225,-88.575,"Active",1
+30.225,-88.575,"Not specified",2
+30.225,-88.525,"Active",6
+30.225,-88.525,"Not specified",9
+30.225,-88.525,"Planned",1
+30.225,-88.475,"Active",1
+30.225,-88.475,"Not specified",1
+30.225,-88.425,"Not specified",1
+30.225,-88.375,"Not specified",10
+30.225,-88.325,"Not specified",5
+30.225,-88.275,"Not specified",3
+30.225,-88.225,"Not specified",1
+30.225,-88.075,"Not specified",3
+30.225,-88.025,"Not specified",7
+30.225,-87.975,"Not specified",1
+30.225,-87.875,"Not specified",1
+30.225,-87.725,"Not specified",2
+30.225,-87.675,"Not specified",1
+30.225,-86.825,"Planned",6
+30.225,-85.875,"Not specified",1
+30.275,-91.675,"Active",1
+30.275,-89.625,"Active",2
+30.275,-89.375,"Active",1
+30.275,-89.325,"Active",2
+30.275,-89.275,"Active",11
+30.275,-89.175,"Not specified",1
+30.275,-89.075,"Active",1
+30.275,-89.025,"Not specified",1
+30.275,-88.925,"Active",1
+30.275,-88.875,"Active",1
+30.275,-88.725,"Active",1
+30.275,-88.625,"Active",1
+30.275,-88.625,"Not specified",2
+30.275,-88.575,"Active",1
+30.275,-88.525,"Active",4
+30.275,-88.525,"Not specified",5
+30.275,-88.325,"Not specified",7
+30.275,-88.275,"Not specified",1
+30.275,-88.225,"Not specified",1
+30.275,-88.175,"Not specified",2
+30.275,-88.125,"Not specified",3
+30.275,-88.075,"Not specified",2
+30.275,-88.025,"Not specified",1
+30.275,-87.975,"Not specified",1
+30.275,-87.875,"Not specified",1
+30.275,-87.775,"Not specified",1
+30.275,-87.575,"Not specified",1
+30.275,-87.525,"Not specified",2
+30.275,-86.825,"Planned",7
+30.325,-89.375,"Active",2
+30.325,-89.325,"Active",16
+30.325,-89.275,"Active",7
+30.325,-89.075,"Active",2
+30.325,-88.775,"Not specified",1
+30.325,-88.675,"Active",6
+30.325,-88.625,"Active",10
+30.325,-88.575,"Active",12
+30.325,-88.575,"Not specified",4
+30.325,-88.525,"Active",5
+30.325,-88.525,"Not specified",5
+30.325,-88.475,"Active",1
+30.325,-88.475,"Not specified",1
+30.325,-88.425,"Active",2
+30.325,-88.425,"Not specified",6
+30.325,-88.325,"Not specified",3
+30.325,-88.275,"Not specified",5
+30.325,-88.175,"Not specified",2
+30.325,-88.125,"Not specified",2
+30.325,-88.025,"Not specified",1
+30.325,-87.425,"Not specified",1
+30.325,-87.125,"Active",1
+30.325,-86.825,"Planned",7
+30.375,-91.675,"Active",1
+30.375,-91.525,"Active",1
+30.375,-89.675,"Active",1
+30.375,-89.325,"Active",1
+30.375,-89.275,"Active",2
+30.375,-88.875,"Active",6
+30.375,-88.825,"Active",6
+30.375,-88.825,"Not specified",6
+30.375,-88.675,"Active",2
+30.375,-88.625,"Active",8
+30.375,-88.575,"Active",10
+30.375,-88.525,"Active",1
+30.375,-88.525,"Not specified",1
+30.375,-88.475,"Active",1
+30.375,-88.425,"Not specified",3
+30.375,-88.375,"Not specified",5
+30.375,-88.275,"Not specified",3
+30.375,-88.025,"Not specified",1
+30.375,-87.875,"Not specified",1
+30.375,-87.475,"Not specified",1
+30.375,-86.875,"Active",1
+30.375,-86.825,"Planned",5
+30.375,-86.775,"Not specified",1
+30.375,-86.625,"Not specified",2
+30.375,-86.575,"Not specified",1
+30.425,-89.675,"Active",1
+30.425,-89.025,"Active",3
+30.425,-88.975,"Active",2
+30.425,-88.875,"Active",3
+30.425,-88.825,"Active",2
+30.425,-88.625,"Active",1
+30.425,-88.575,"Active",3
+30.425,-88.525,"Active",1
+30.425,-88.475,"Active",1
+30.425,-88.075,"Not specified",1
+30.425,-88.025,"Not specified",2
+30.475,-91.775,"Active",1
+30.475,-89.725,"Active",1
+30.475,-88.625,"Active",3
+30.475,-88.575,"Active",2
+30.475,-88.125,"Not specified",1
+30.475,-87.975,"Not specified",1
+30.525,-91.225,"Planned",1
+30.525,-88.625,"Active",2
+30.525,-88.575,"Active",2
+30.525,-87.925,"Not specified",2
+30.575,-88.075,"Not specified",1
+30.625,-88.075,"Not specified",1
+30.675,-91.725,"Active",1
+30.675,-88.025,"Not specified",1
+30.675,-87.975,"Not specified",1
+30.675,-87.925,"Not specified",1
+30.975,-91.825,"Active",1
+30.975,-91.775,"Active",1
+31.075,-91.725,"Active",1
+31.175,-92.325,"Active",1
+31.175,-92.275,"Active",1
+31.225,-92.075,"Active",1
+31.275,-91.925,"Active",1
+31.275,-91.825,"Active",1
+31.325,-92.475,"Active",1
+31.325,-91.875,"Active",1
+31.425,-92.675,"Active",1
+31.475,-91.875,"Active",1
+31.575,-92.775,"Active",1
+31.625,-91.825,"Active",1
+31.725,-92.975,"Active",1
+31.925,-91.925,"Active",1
+31.975,-93.375,"Active",1
+32.125,-92.125,"Active",1
+32.175,-92.125,"Active",1
+32.275,-93.525,"Active",1
+32.325,-92.075,"Active",1
+32.525,-93.725,"Active",1
+32.575,-92.125,"Active",1
+32.875,-93.825,"Active",1
+32.875,-92.075,"Active",1
+33.025,-92.125,"Active",1
+33.075,-92.125,"Active",1
+33.275,-92.475,"Active",1
+33.325,-92.475,"Active",2
+33.575,-92.825,"Active",1
+33.775,-92.875,"Active",1
+34.125,-93.075,"Active",1
