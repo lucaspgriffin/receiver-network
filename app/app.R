@@ -12,7 +12,7 @@ library(shiny)
 library(bslib)
 library(leaflet)
 
-MAX_ZOOM <- 10
+MAX_ZOOM <- 9 # ~270 m/pixel at 30°N
 MIN_ZOOM <- 4
 
 #----------------------------------------------------------

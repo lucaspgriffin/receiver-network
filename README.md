@@ -15,7 +15,7 @@ The same app is published two ways:
 - `R/prep_public_receivers.R` reads the source lists from `data-raw/`
   (git-ignored), drops receiver names and institutions, and writes true
   positions (rounded to 4 decimals, ~10 m) to `app/receivers_public.csv`.
-- The map is capped at zoom 10 (`MAX_ZOOM` in `app/app.R`) so it can't be
+- The map is capped at zoom 9 (`MAX_ZOOM` in `app/app.R`) so it can't be
   zoomed to fine scale. Note that the public CSV itself has the coordinates.
 - Receivers are not labelled by institution. Partners are credited as a list in
   the sidebar, from `app/partners.csv` (edit by hand).
