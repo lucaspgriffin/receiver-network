@@ -31,9 +31,9 @@ To change the level of generalization, edit `GRID_DEG` in the prep script and
   `Proposed` is folded into `Planned`.
 - `BTT_BZ_MX_deployments.csv`: Bonefish & Tarpon Trust Belize/Mexico array,
   copied from `BTT_AcTelem_BZ_MX/data/processed/deployments_clean.csv`.
-- `SJB_deployment.csv`: St. Joe Bay OTN deployment sheet. Current stations
-  (`RECOVERED != "y"`) replace any partner-list receivers inside the array's
-  footprint (+0.01°).
+- `SJB_deployed_stations.csv`: current St. Joe Bay stations, copied from
+  `SJB-Receiver-Map-App/data/SJB_deployed_stations.csv`. These replace any
+  partner-list receivers inside the array's footprint (+0.01°).
 
 The prep script also:
 

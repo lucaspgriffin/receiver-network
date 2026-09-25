@@ -81,13 +81,13 @@ message("BTT receivers added: ", nrow(btt_rx))
 # 3. ST. JOE BAY ARRAY (replaces older entries inside the bay)
 #----------------------------------------------------------
 
-sjb <- read.csv("data-raw/SJB_deployment.csv", stringsAsFactors = FALSE)
+# Current deployed stations, copied from
+# SJB-Receiver-Map-App/data/SJB_deployed_stations.csv
+sjb <- read.csv("data-raw/SJB_deployed_stations.csv", stringsAsFactors = FALSE)
 
-# Currently deployed stations only
 sjb_rx <- sjb %>%
-  filter(toupper(RECOVERED) != "Y") %>%
-  distinct(STATION_NO, .keep_all = TRUE) %>%
-  transmute(Institution = "SJB", Lat = DEPLOY_LAT, Lon = DEPLOY_LONG, Status = "Active")
+  distinct(name, .keep_all = TRUE) %>%
+  transmute(Institution = "SJB", Lat = lat, Lon = lon, Status = "Active")
 
 # Footprint of the new array plus ~1 km; older receivers inside it
 # are superseded by this deployment sheet
