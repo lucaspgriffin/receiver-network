@@ -78,10 +78,36 @@ btt_rx <- btt %>%
 message("BTT receivers added: ", nrow(btt_rx))
 
 #----------------------------------------------------------
-# 3. COMBINE + QA BOUNDS
+# 3. ST. JOE BAY ARRAY (replaces older entries inside the bay)
 #----------------------------------------------------------
 
-receivers <- bind_rows(partner_rx, btt_rx) %>%
+sjb <- read.csv("data-raw/SJB_deployment.csv", stringsAsFactors = FALSE)
+
+# Currently deployed stations only
+sjb_rx <- sjb %>%
+  filter(toupper(RECOVERED) != "Y") %>%
+  distinct(STATION_NO, .keep_all = TRUE) %>%
+  transmute(Institution = "SJB", Lat = DEPLOY_LAT, Lon = DEPLOY_LONG, Status = "Active")
+
+# Footprint of the new array plus ~1 km; older receivers inside it
+# are superseded by this deployment sheet
+SJB_BUFFER <- 0.01
+in_sjb <- with(
+  partner_rx,
+  Lat >= min(sjb_rx$Lat) - SJB_BUFFER & Lat <= max(sjb_rx$Lat) + SJB_BUFFER &
+    Lon >= min(sjb_rx$Lon) - SJB_BUFFER & Lon <= max(sjb_rx$Lon) + SJB_BUFFER
+)
+message(
+  "St. Joe Bay: replaced ", sum(in_sjb), " existing receivers with ",
+  nrow(sjb_rx), " from the deployment sheet"
+)
+partner_rx <- partner_rx[!in_sjb, ]
+
+#----------------------------------------------------------
+# 4. COMBINE + QA BOUNDS
+#----------------------------------------------------------
+
+receivers <- bind_rows(partner_rx, btt_rx, sjb_rx) %>%
   filter(
     !is.na(Lat), !is.na(Lon),
     Lat >= 15, Lat <= 35,
@@ -91,7 +117,7 @@ receivers <- bind_rows(partner_rx, btt_rx) %>%
 message("Receivers kept: ", nrow(receivers))
 
 #----------------------------------------------------------
-# 4. GENERALIZE: RANDOM POINT WITHIN EACH RECEIVER'S GRID CELL
+# 5. GENERALIZE: RANDOM POINT WITHIN EACH RECEIVER'S GRID CELL
 #----------------------------------------------------------
 
 set.seed(SEED)
