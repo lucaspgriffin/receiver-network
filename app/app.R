@@ -150,7 +150,13 @@ server <- function(input, output, session) {
       fitBounds(-98, 18.5, -79, 31)
   })
 
+  # Under shinylive the proxy can fire before the map widget exists,
+  # so wait for the map to report its bounds before drawing markers
+  map_ready <- reactiveVal(FALSE)
+  observeEvent(input$map_bounds, map_ready(TRUE), once = TRUE)
+
   observe({
+    req(map_ready())
     cl <- cells()
     proxy <- leafletProxy("map") |> clearMarkers()
     if (is.null(cl)) return()
