@@ -27,7 +27,8 @@ To change the level of generalization, edit `GRID_DEG` in the prep script and
 ## Data sources (local only, in `data-raw/`)
 
 - `Cobia_TTT_Receiver_List.csv`: partner receiver list
-  (`Receiver, Lat, Lon, Institution, notes`). Blank `notes` are treated as Active.
+  (`Receiver, Lat, Lon, Institution, notes`). Blank `notes` are treated as Active;
+  `Proposed` is folded into `Planned`.
 - `BTT_BZ_MX_deployments.csv`: Bonefish & Tarpon Trust Belize/Mexico array,
   copied from `BTT_AcTelem_BZ_MX/data/processed/deployments_clean.csv`.
 

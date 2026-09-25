@@ -32,9 +32,11 @@ partner_rx <- raw %>%
     Lon = as.numeric(Lon),
     Institution = str_squish(Institution),
 
-    # Blank notes are established, deployed arrays
+    # Blank notes are established, deployed arrays;
+    # "proposed" and "planned" mean the same thing here
     Status = case_when(
       is.na(notes) | str_squish(notes) == "" ~ "Active",
+      str_to_lower(str_squish(notes)) %in% c("planned", "proposed") ~ "Planned",
       TRUE ~ str_to_title(str_squish(notes))
     ),
 

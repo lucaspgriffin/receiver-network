@@ -24,9 +24,8 @@ rx <- read.csv("receivers_public.csv", stringsAsFactors = FALSE)
 partners <- read.csv("partners.csv", stringsAsFactors = FALSE, na.strings = "")
 
 status_cols <- c(
-  "Active"   = "#0072B2",
-  "Planned"  = "#E69F00",
-  "Proposed" = "#CC79A7"
+  "Active"  = "#0072B2",
+  "Planned" = "#E69F00"
 )
 status_cols <- status_cols[names(status_cols) %in% rx$status]
 statuses <- names(status_cols)
@@ -64,7 +63,9 @@ ui <- page_sidebar(
     p(
       class = "small text-muted",
       "Acoustic telemetry receivers operated by partner institutions",
-      "across the Gulf and western Caribbean."
+      "across the Gulf and western Caribbean. This is a partial",
+      "collection, shown to the best of our knowledge; other arrays",
+      "exist, and active receivers may be relocated over time."
     ),
     checkboxGroupInput(
       "status", "Receiver status",
