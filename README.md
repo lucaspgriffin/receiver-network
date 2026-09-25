@@ -1,50 +1,58 @@
-# Cobia & Tripletail Receiver Network Map
+# Receiver Network
 
-Public, interactive map of the acoustic receiver network used for cobia and
-tripletail tracking across the Gulf. It is an R Shiny app compiled with
-[shinylive](https://posit-dev.github.io/r-shinylive/), so it runs entirely in the
-visitor's browser and is hosted free on GitHub Pages (no Shiny server needed).
+Public, interactive map of a partner acoustic telemetry receiver network across
+the Gulf and western Caribbean, built as an R Shiny app.
 
-**Live app:** https://lucaspgriffin.github.io/cobia-tripletail-receiver-map/
+The same app is published two ways:
 
-QR code (links to the app): [`qr/receiver-map-qr.png`](qr/receiver-map-qr.png) ·
-[`qr/receiver-map-qr.svg`](qr/receiver-map-qr.svg) (vector, best for print)
+| Where | URL | QR code | Notes |
+|---|---|---|---|
+| shinyapps.io | https://lucaspgriffin.shinyapps.io/receiver-network/ | [`qr/qr-shinyapps.png`](qr/qr-shinyapps.png) · [svg](qr/qr-shinyapps.svg) | Loads fast; free tier has monthly active-hour limits |
+| GitHub Pages | https://lucaspgriffin.github.io/receiver-network/ | [`qr/qr-github-pages.png`](qr/qr-github-pages.png) · [svg](qr/qr-github-pages.svg) | Runs in the browser via [shinylive](https://posit-dev.github.io/r-shinylive/); no usage limits, ~20-30 s first load |
 
 ## Location privacy
 
 Exact receiver coordinates are **not** in this repository.
 
-- `R/prep_public_receivers.R` reads the exact list from `data-raw/` (git-ignored),
-  drops receiver names and institutions, snaps coordinates to a 0.05° grid
-  (~5 km), and writes counts per grid cell × status to `app/receivers_public.csv`.
-- Receivers are not labelled by institution. Partners are credited as a list
-  in the sidebar, from `app/partners.csv` (edit it by hand; a blank `name`
-  shows the acronym alone).
-- The map is capped at zoom level 10, so it cannot be zoomed to fine scale.
+- `R/prep_public_receivers.R` reads the exact lists from `data-raw/` (git-ignored),
+  drops receiver names and institutions, and places each receiver at a random
+  point inside its 0.05° (~5 km) grid cell. Row order is shuffled.
+- The map clusters receivers when zoomed out, shows individuals from zoom 9,
+  and is capped at zoom 10.
+- Receivers are not labelled by institution. Partners are credited as a list in
+  the sidebar, from `app/partners.csv` (edit by hand).
 
 To change the level of generalization, edit `GRID_DEG` in the prep script and
-`MAX_ZOOM` in `app/app.R`.
+`MAX_ZOOM` / `UNCLUSTER_ZOOM` in `app/app.R`.
 
-## Updating the receiver list
+## Data sources (local only, in `data-raw/`)
 
-1. Save the updated receiver CSV to `data-raw/Cobia_TTT_Receiver_List.csv`
-   (columns: `Receiver, Lat, Lon, Institution, notes`).
-2. Run `Rscript R/prep_public_receivers.R` from the repo root.
+- `Cobia_TTT_Receiver_List.csv`: partner receiver list
+  (`Receiver, Lat, Lon, Institution, notes`). Blank `notes` are treated as Active.
+- `BTT_BZ_MX_deployments.csv`: Bonefish & Tarpon Trust Belize/Mexico array,
+  copied from `BTT_AcTelem_BZ_MX/data/processed/deployments_clean.csv`.
+
+The prep script also:
+
+- flips two TAMUG platform longitudes entered without the minus sign;
+- drops the inland LSU FAMEL river array (north of 30.1°N, west of 90.5°W);
+- drops the retired BTT Cayo_Mosquito station (replaced by Boca_Chica).
+
+## Updating
+
+1. Update the files in `data-raw/`.
+2. `Rscript R/prep_public_receivers.R` from the repo root.
 3. If a new institution appears, add it to `app/partners.csv`.
-4. Commit and push `app/receivers_public.csv`. GitHub Actions rebuilds and
-   redeploys the site in a few minutes; the QR code URL stays the same.
+4. Commit and push: GitHub Actions rebuilds GitHub Pages in a few minutes.
+5. Redeploy shinyapps.io:
+   ```r
+   rsconnect::deployApp("app", appName = "receiver-network", account = "lucaspgriffin")
+   ```
+
+QR code URLs stay the same across updates.
 
 ## Running locally
 
 ```r
 shiny::runApp("app")
 ```
-
-## Data notes
-
-- Two TAMUG platform longitudes were entered without the minus sign
-  (`Mobile Platform`, `Sargent Platform`); the prep script flips them.
-- Bounds were widened from the original Gulf box (lat 20–32, lon −100 to −80)
-  to keep the Veracruz, Atlantic Florida, and inland Louisiana/Arkansas river
-  receivers.
-- Blank `notes` are shown as status "Not specified".

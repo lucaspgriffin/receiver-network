@@ -1,19 +1,21 @@
 #==========================================================
-# COBIA & TRIPLETAIL ACOUSTIC RECEIVER NETWORK
-# Public Shiny app (runs in the browser via shinylive)
+# RECEIVER NETWORK
+# Public Shiny app (runs on shinyapps.io, and in the browser
+# via shinylive on GitHub Pages)
 #
-# Locations are generalized to ~5 km grid cells and the map
-# will not zoom in past MAX_ZOOM, so exact receiver positions
-# are never shown. Receivers are not labelled by institution;
-# partners are credited as a list in the sidebar.
+# Receiver positions in receivers_public.csv are already
+# generalized (see R/prep_public_receivers.R), and the map will
+# not zoom in past MAX_ZOOM. Receivers are not labelled by
+# institution; partners are credited as a list in the sidebar.
 #==========================================================
 
 library(shiny)
 library(bslib)
 library(leaflet)
 
-MAX_ZOOM <- 10 # ~150 m/pixel; a 5 km cell is still a blob, not a spot
+MAX_ZOOM <- 10
 MIN_ZOOM <- 4
+UNCLUSTER_ZOOM <- 9 # clusters break into individual receivers here
 
 #----------------------------------------------------------
 # DATA
@@ -22,15 +24,12 @@ MIN_ZOOM <- 4
 rx <- read.csv("receivers_public.csv", stringsAsFactors = FALSE)
 partners <- read.csv("partners.csv", stringsAsFactors = FALSE, na.strings = "")
 
-# Status order doubles as priority: a cell with any active
-# receiver is drawn as active, and so on
 status_cols <- c(
-  "Active"        = "#0072B2",
-  "Not specified" = "#56B4E9",
-  "Planned"       = "#E69F00",
-  "Proposed"      = "#CC79A7"
+  "Active"   = "#0072B2",
+  "Planned"  = "#E69F00",
+  "Proposed" = "#CC79A7"
 )
-status_cols <- status_cols[names(status_cols) %in% rx$Status]
+status_cols <- status_cols[names(status_cols) %in% rx$status]
 statuses <- names(status_cols)
 
 # Checkbox labels double as the colour key
@@ -50,12 +49,29 @@ partner_label <- ifelse(
   paste0(partners$name, " (", partners$acronym, ")")
 )
 
+# Neutral cluster bubbles, so they don't read as a status colour
+cluster_icon <- JS("
+  function(cluster) {
+    var n = cluster.getChildCount();
+    var s = n < 10 ? 30 : n < 100 ? 38 : 46;
+    return new L.DivIcon({
+      html: '<div style=\"width:' + s + 'px;height:' + s + 'px;line-height:' + s + 'px;' +
+            'border-radius:50%;background:rgba(0,48,87,0.85);color:#fff;' +
+            'font:600 13px system-ui,sans-serif;text-align:center;' +
+            'box-shadow:0 0 0 4px rgba(0,48,87,0.25);\">' + n + '</div>',
+      className: '',
+      iconSize: new L.Point(s, s)
+    });
+  }
+")
+
 #----------------------------------------------------------
 # UI
 #----------------------------------------------------------
 
 ui <- page_sidebar(
-  title = "Cobia & Tripletail Receiver Network",
+  title = "Receiver Network",
+  window_title = "Receiver Network",
   theme = bs_theme(version = 5, primary = "#0072B2"),
   fillable_mobile = TRUE,
 
@@ -64,9 +80,9 @@ ui <- page_sidebar(
     open = list(desktop = "open", mobile = "closed"),
     p(
       class = "small text-muted",
-      "Acoustic receivers used to track tagged cobia and tripletail",
-      "across the Gulf. Locations are generalized to ~5 km areas;",
-      "circle size shows the number of receivers in each area."
+      "Acoustic telemetry receivers operated by partner institutions",
+      "across the Gulf and western Caribbean. Zoom in to see",
+      "individual receivers."
     ),
     checkboxGroupInput(
       "status", "Receiver status",
@@ -96,37 +112,14 @@ ui <- page_sidebar(
 server <- function(input, output, session) {
 
   filtered <- reactive({
-    rx[rx$Status %in% input$status, ]
-  })
-
-  # One marker per grid cell, coloured by its highest-priority status
-  cells <- reactive({
-    d <- filtered()
-    if (nrow(d) == 0) return(NULL)
-    key <- paste(d$cell_lat, d$cell_lon)
-    do.call(rbind, lapply(split(d, key), function(g) {
-      g <- g[order(match(g$Status, statuses)), ]
-      n <- sum(g$n_receivers)
-      data.frame(
-        lat = g$cell_lat[1],
-        lon = g$cell_lon[1],
-        n = n,
-        col = status_cols[[g$Status[1]]],
-        popup = paste0(
-          "<b>", n, " receiver", ifelse(n > 1, "s", ""),
-          " in this ~5 km area</b><br>",
-          paste0(g$n_receivers, " ", tolower(g$Status), collapse = "<br>")
-        ),
-        stringsAsFactors = FALSE
-      )
-    }))
+    rx[rx$status %in% input$status, ]
   })
 
   # Markers are drawn inside renderLeaflet (not via leafletProxy) so
   # they reliably appear under shinylive. The current view is kept
   # when filters change.
   output$map <- renderLeaflet({
-    cl <- cells()
+    d <- filtered()
     ctr <- isolate(input$map_center)
     zm <- isolate(input$map_zoom)
 
@@ -143,35 +136,37 @@ server <- function(input, output, session) {
         baseGroups = c("Ocean", "Satellite"),
         options = layersControlOptions(collapsed = TRUE)
       ) |>
-      setMaxBounds(-105, 12, -70, 40)
+      setMaxBounds(-105, 10, -70, 40)
 
     m <- if (is.null(ctr)) {
-      fitBounds(m, -98, 18.5, -79, 31)
+      fitBounds(m, -98, 16.5, -79, 31)
     } else {
       setView(m, ctr$lng, ctr$lat, zm)
     }
 
-    if (is.null(cl)) return(m)
+    if (nrow(d) == 0) return(m)
 
     m |>
       addCircleMarkers(
-        data = cl, lng = ~lon, lat = ~lat,
-        radius = ~pmin(4 + 2.5 * sqrt(n), 16),
+        data = d, lng = ~lon, lat = ~lat,
+        radius = 6,
         color = "white", weight = 1, opacity = 0.9,
-        fillColor = ~col, fillOpacity = 0.85,
-        popup = ~popup
+        fillColor = ~unname(status_cols[status]), fillOpacity = 0.9,
+        popup = ~paste0("<b>Receiver</b><br>Status: ", tolower(status)),
+        clusterOptions = markerClusterOptions(
+          disableClusteringAtZoom = UNCLUSTER_ZOOM,
+          showCoverageOnHover = FALSE,
+          spiderfyOnMaxZoom = FALSE,
+          maxClusterRadius = 50,
+          iconCreateFunction = cluster_icon
+        )
       )
   })
 
   output$summary <- renderUI({
-    d <- filtered()
     p(
       class = "small text-muted",
-      sprintf(
-        "%s receivers in %d areas shown",
-        format(sum(d$n_receivers), big.mark = ","),
-        length(unique(paste(d$cell_lat, d$cell_lon)))
-      )
+      sprintf("%s receivers shown", format(nrow(filtered()), big.mark = ","))
     )
   })
 }
