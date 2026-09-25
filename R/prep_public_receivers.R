@@ -1,12 +1,11 @@
 #==========================================================
-# PREP PUBLIC (GENERALIZED) RECEIVER DATA
+# PREP PUBLIC RECEIVER DATA
 #
-# Reads the exact receiver lists (kept out of git in data-raw/)
-# and writes app/receivers_public.csv, which is safe to publish:
+# Reads the source receiver lists (kept out of git in data-raw/)
+# and writes app/receivers_public.csv:
 #   - receiver names and institutions dropped
-#   - each receiver placed at a random point inside its GRID_DEG
-#     grid cell, so the map shows individual receivers without
-#     revealing where in the cell they actually sit
+#   - coordinates kept at their true positions (4 decimals, ~10 m);
+#     the app limits how far the map can zoom in
 #
 # Partners are credited as a list in app/partners.csv, never tied
 # to locations.
@@ -17,8 +16,6 @@
 library(dplyr)
 library(stringr)
 
-GRID_DEG <- 0.05 # ~5.5 km N-S; true positions are never finer than this
-SEED <- 20260925 # fixed so points don't jump around between rebuilds
 
 #----------------------------------------------------------
 # 1. PARTNER RECEIVER LIST
@@ -117,20 +114,12 @@ receivers <- bind_rows(partner_rx, btt_rx, sjb_rx) %>%
 message("Receivers kept: ", nrow(receivers))
 
 #----------------------------------------------------------
-# 5. GENERALIZE: RANDOM POINT WITHIN EACH RECEIVER'S GRID CELL
+# 5. PUBLIC OUTPUT
 #----------------------------------------------------------
 
-set.seed(SEED)
-
-cell_origin <- function(x) floor(x / GRID_DEG) * GRID_DEG
-
 public <- receivers %>%
-  mutate(
-    lat = round(cell_origin(Lat) + runif(n(), 0.1, 0.9) * GRID_DEG, 4),
-    lon = round(cell_origin(Lon) + runif(n(), 0.1, 0.9) * GRID_DEG, 4)
-  ) %>%
-  select(lat, lon, status = Status) %>%
-  slice_sample(prop = 1) # shuffle so row order carries no information
+  transmute(lat = round(Lat, 4), lon = round(Lon, 4), status = Status) %>%
+  arrange(lat, lon) # sorted so row order carries no institution information
 
 write.csv(public, "app/receivers_public.csv", row.names = FALSE)
 

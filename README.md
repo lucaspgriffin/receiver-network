@@ -10,19 +10,15 @@ The same app is published two ways:
 | shinyapps.io | https://lucaspgriffin.shinyapps.io/receiver-network/ | [`qr/qr-shinyapps.png`](qr/qr-shinyapps.png) · [svg](qr/qr-shinyapps.svg) | Loads fast; free tier has monthly active-hour limits |
 | GitHub Pages | https://lucaspgriffin.github.io/receiver-network/ | [`qr/qr-github-pages.png`](qr/qr-github-pages.png) · [svg](qr/qr-github-pages.svg) | Runs in the browser via [shinylive](https://posit-dev.github.io/r-shinylive/); no usage limits, ~20-30 s first load |
 
-## Location privacy
+## Location detail
 
-Exact receiver coordinates are **not** in this repository.
-
-- `R/prep_public_receivers.R` reads the exact lists from `data-raw/` (git-ignored),
-  drops receiver names and institutions, and places each receiver at a random
-  point inside its 0.05° (~5 km) grid cell. Row order is shuffled.
-- The map is capped at zoom 10.
+- `R/prep_public_receivers.R` reads the source lists from `data-raw/`
+  (git-ignored), drops receiver names and institutions, and writes true
+  positions (rounded to 4 decimals, ~10 m) to `app/receivers_public.csv`.
+- The map is capped at zoom 10 (`MAX_ZOOM` in `app/app.R`) so it can't be
+  zoomed to fine scale. Note that the public CSV itself has the coordinates.
 - Receivers are not labelled by institution. Partners are credited as a list in
   the sidebar, from `app/partners.csv` (edit by hand).
-
-To change the level of generalization, edit `GRID_DEG` in the prep script and
-`MAX_ZOOM` in `app/app.R`.
 
 ## Data sources (local only, in `data-raw/`)
 

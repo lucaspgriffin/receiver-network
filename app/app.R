@@ -3,8 +3,7 @@
 # Public Shiny app (runs on shinyapps.io, and in the browser
 # via shinylive on GitHub Pages)
 #
-# Receiver positions in receivers_public.csv are already
-# generalized (see R/prep_public_receivers.R), and the map will
+# Receivers are shown at their true positions, but the map will
 # not zoom in past MAX_ZOOM. Receivers are not labelled by
 # institution; partners are credited as a list in the sidebar.
 #==========================================================
@@ -95,7 +94,7 @@ server <- function(input, output, session) {
       fitBounds(-98, 16.5, -79, 31) |>
       addCircleMarkers(
         data = rx, lng = ~lon, lat = ~lat,
-        radius = 4,
+        radius = 3.5,
         color = "white", weight = 0.7, opacity = 0.9,
         fillColor = DOT_COL, fillOpacity = 0.85
       )
