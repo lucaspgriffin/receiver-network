@@ -17,13 +17,12 @@ Exact receiver coordinates are **not** in this repository.
 - `R/prep_public_receivers.R` reads the exact lists from `data-raw/` (git-ignored),
   drops receiver names and institutions, and places each receiver at a random
   point inside its 0.05° (~5 km) grid cell. Row order is shuffled.
-- The map clusters receivers when zoomed out, shows individuals from zoom 9,
-  and is capped at zoom 10.
+- The map is capped at zoom 10.
 - Receivers are not labelled by institution. Partners are credited as a list in
   the sidebar, from `app/partners.csv` (edit by hand).
 
 To change the level of generalization, edit `GRID_DEG` in the prep script and
-`MAX_ZOOM` / `UNCLUSTER_ZOOM` in `app/app.R`.
+`MAX_ZOOM` in `app/app.R`.
 
 ## Data sources (local only, in `data-raw/`)
 

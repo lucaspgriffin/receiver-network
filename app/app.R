@@ -15,7 +15,6 @@ library(leaflet)
 
 MAX_ZOOM <- 10
 MIN_ZOOM <- 4
-UNCLUSTER_ZOOM <- 9 # clusters break into individual receivers here
 
 #----------------------------------------------------------
 # DATA
@@ -49,22 +48,6 @@ partner_label <- ifelse(
   paste0(partners$name, " (", partners$acronym, ")")
 )
 
-# Neutral cluster bubbles, so they don't read as a status colour
-cluster_icon <- JS("
-  function(cluster) {
-    var n = cluster.getChildCount();
-    var s = n < 10 ? 30 : n < 100 ? 38 : 46;
-    return new L.DivIcon({
-      html: '<div style=\"width:' + s + 'px;height:' + s + 'px;line-height:' + s + 'px;' +
-            'border-radius:50%;background:rgba(0,48,87,0.85);color:#fff;' +
-            'font:600 13px system-ui,sans-serif;text-align:center;' +
-            'box-shadow:0 0 0 4px rgba(0,48,87,0.25);\">' + n + '</div>',
-      className: '',
-      iconSize: new L.Point(s, s)
-    });
-  }
-")
-
 #----------------------------------------------------------
 # UI
 #----------------------------------------------------------
@@ -81,8 +64,7 @@ ui <- page_sidebar(
     p(
       class = "small text-muted",
       "Acoustic telemetry receivers operated by partner institutions",
-      "across the Gulf and western Caribbean. Zoom in to see",
-      "individual receivers."
+      "across the Gulf and western Caribbean."
     ),
     checkboxGroupInput(
       "status", "Receiver status",
@@ -149,17 +131,10 @@ server <- function(input, output, session) {
     m |>
       addCircleMarkers(
         data = d, lng = ~lon, lat = ~lat,
-        radius = 6,
-        color = "white", weight = 1, opacity = 0.9,
-        fillColor = ~unname(status_cols[status]), fillOpacity = 0.9,
-        popup = ~paste0("<b>Receiver</b><br>Status: ", tolower(status)),
-        clusterOptions = markerClusterOptions(
-          disableClusteringAtZoom = UNCLUSTER_ZOOM,
-          showCoverageOnHover = FALSE,
-          spiderfyOnMaxZoom = FALSE,
-          maxClusterRadius = 50,
-          iconCreateFunction = cluster_icon
-        )
+        radius = 4,
+        color = "white", weight = 0.7, opacity = 0.9,
+        fillColor = ~unname(status_cols[status]), fillOpacity = 0.85,
+        popup = ~paste0("<b>Receiver</b><br>Status: ", tolower(status))
       )
   })
 
