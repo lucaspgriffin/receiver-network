@@ -30,12 +30,16 @@ The same app is published two ways:
 - `SJB_deployed_stations.csv`: current St. Joe Bay stations, copied from
   `SJB-Receiver-Map-App/data/SJB_deployed_stations.csv`. These replace any
   partner-list receivers inside the array's footprint (+0.01°).
+- `updated_receivers_2026-09-25.csv`: updated AL / Okaloosa / PCB / SJB-area
+  list (Sep 2026, `Present = Yes`). Replaces partner-list receivers within 1 km.
 
 The prep script also:
 
 - flips two TAMUG platform longitudes entered without the minus sign;
 - drops the inland LSU FAMEL river array (north of 30.1°N, west of 90.5°W);
-- drops the retired BTT Cayo_Mosquito station (replaced by Boca_Chica).
+- drops the retired BTT Cayo_Mosquito station (replaced by Boca_Chica);
+- removes stacked duplicates (receivers within 25 m of one another, e.g. the
+  same receiver listed by two institutions), keeping the most current source.
 
 ## Updating
 

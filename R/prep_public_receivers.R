@@ -101,20 +101,65 @@ message(
 partner_rx <- partner_rx[!in_sjb, ]
 
 #----------------------------------------------------------
-# 4. COMBINE + QA BOUNDS
+# 4. UPDATED PANHANDLE / ALABAMA LIST (Sep 2026)
 #----------------------------------------------------------
 
-receivers <- bind_rows(partner_rx, btt_rx, sjb_rx) %>%
+hav_m <- function(lat1, lon1, lat2, lon2) {
+  r <- pi / 180
+  a <- sin((lat2 - lat1) * r / 2)^2 +
+    cos(lat1 * r) * cos(lat2 * r) * sin((lon2 - lon1) * r / 2)^2
+  2 * 6371000 * asin(sqrt(a))
+}
+
+upd <- read.csv("data-raw/updated_receivers_2026-09-25.csv", stringsAsFactors = FALSE)
+
+upd_rx <- upd %>%
+  filter(toupper(Present) == "YES") %>%
+  transmute(Institution = "USGS", Lat = Lat, Lon = Lon, Status = "Active")
+
+# Older partner-list entries within UPD_REPLACE_M of an updated receiver are
+# the same site (or its previous position) and would sit on top of it
+UPD_REPLACE_M <- 1000
+near_upd <- vapply(
+  seq_len(nrow(partner_rx)),
+  function(i) any(hav_m(partner_rx$Lat[i], partner_rx$Lon[i], upd_rx$Lat, upd_rx$Lon) <= UPD_REPLACE_M),
+  logical(1)
+)
+message(
+  "Updated list: replaced ", sum(near_upd), " existing receivers with ",
+  nrow(upd_rx), " updated entries"
+)
+partner_rx <- partner_rx[!near_upd, ]
+
+#----------------------------------------------------------
+# 5. COMBINE + QA BOUNDS + DE-DUPLICATE
+#----------------------------------------------------------
+
+# Most authoritative sources first, so they win the de-duplication
+receivers <- bind_rows(sjb_rx, upd_rx, btt_rx, partner_rx) %>%
   filter(
     !is.na(Lat), !is.na(Lon),
     Lat >= 15, Lat <= 35,
     Lon >= -100, Lon <= -78
   )
 
+# Drop stacked duplicates (same receiver listed twice). The SJB
+# positioning array is intentionally ~45-50 m apart, so stay well below that
+DUP_M <- 25
+keep <- rep(TRUE, nrow(receivers))
+for (i in seq_len(nrow(receivers))[-1]) {
+  prev <- which(keep[seq_len(i - 1)])
+  if (any(hav_m(receivers$Lat[i], receivers$Lon[i], receivers$Lat[prev], receivers$Lon[prev]) <= DUP_M)) {
+    keep[i] <- FALSE
+  }
+}
+message("Removed ", sum(!keep), " duplicate receivers (within ", DUP_M, " m of another)")
+receivers <- receivers[keep, ]
+
 message("Receivers kept: ", nrow(receivers))
 
 #----------------------------------------------------------
-# 5. PUBLIC OUTPUT
+# 6. PUBLIC OUTPUT
 #----------------------------------------------------------
 
 public <- receivers %>%
